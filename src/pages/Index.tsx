@@ -6,11 +6,41 @@ import ServicesSection from '@/components/home/ServicesSection';
 import WhyChooseUsSection from '@/components/home/WhyChooseUsSection';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
 import ContactSection from '@/components/home/ContactSection';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import { Home, Component } from "lucide-react";
+import { useTheme } from '@/context/ThemeContext';
 
 const Index = () => {
+  const { theme } = useTheme();
+  
   return (
     <Layout>
       <div className="relative">
+        {/* Breadcrumb appears above hero */}
+        <div className={`container mx-auto py-4 px-4 ${theme === 'light' ? 'text-navy' : 'text-white/80'}`}>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/" className="inline-flex items-center gap-1.5">
+                  <Home size={16} strokeWidth={2} aria-hidden="true" />
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Dashboard</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+        
         <HeroGeometric 
           badge="GraphiXlab Studio"
           title1="Elevate Your Digital"
@@ -19,7 +49,7 @@ const Index = () => {
         
         <ServicesSection />
         
-        {/* Glowing divider */}
+        {/* Glowing divider with electric-blue */}
         <div className="relative">
           <div className="absolute left-1/2 -translate-x-1/2 -top-5 w-20 h-10">
             <div className="absolute w-full h-full bg-electric-blue opacity-20 blur-xl rounded-full animate-pulse-slow"></div>
@@ -29,7 +59,7 @@ const Index = () => {
         
         <WhyChooseUsSection />
         
-        {/* Another fancy divider */}
+        {/* Fancy divider with electric-blue gradient */}
         <div className="relative py-10">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center">
