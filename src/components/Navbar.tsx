@@ -2,13 +2,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
+import { useToast } from '@/hooks/use-toast';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { theme } = useTheme();
+  const { toast } = useToast();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -27,6 +29,14 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [scrolled]);
+
+  const handleCall = () => {
+    toast({
+      title: "Calling GraphiXlab",
+      description: "Connecting to 7002642149",
+    });
+    window.location.href = "tel:7002642149";
+  };
 
   const navBgClass = scrolled 
     ? 'bg-deep-black/95 backdrop-blur-md shadow-lg' 
@@ -70,7 +80,11 @@ const Navbar = () => {
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">Contact</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
-          <Button className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1">
+          <Button 
+            onClick={handleCall}
+            className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1 animate-pulse-slow"
+          >
+            <Phone className="mr-2" size={18} />
             Let's Talk
           </Button>
         </div>
@@ -126,7 +140,11 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            <Button className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md">
+            <Button 
+              onClick={handleCall} 
+              className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md flex items-center"
+            >
+              <Phone className="mr-2" size={18} />
               Let's Talk
             </Button>
           </div>
