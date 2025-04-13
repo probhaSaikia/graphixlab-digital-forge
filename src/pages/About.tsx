@@ -67,13 +67,13 @@ const About = () => {
               <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
               <div className="space-y-6 text-gray-300">
                 <p>
-                  Hi, I'm John, founder and creative director of GraphiXlab. With over a decade of experience in digital design and development, I created this agency to bridge the gap between stunning visuals and technical excellence.
+                With over a year of hands-on experience in digital design and development, this journey began as a solo freelancing venture driven by a passion for creating impactful web experiences. What started as small-scale projects has grown into a mission to blend beautiful design with functional, results-driven solutions.
                 </p>
                 <p>
-                  What started as a solo freelance journey has evolved into a dedicated team of digital specialists who share a passion for crafting exceptional web experiences. Our mission is simple: create digital solutions that not only look great but deliver measurable results for our clients.
+                The goal is simple: to craft digital experiences that not only look stunning but also perform seamlessly and deliver real value. Every project is approached as a unique opportunity to combine creativity with strategy, ensuring both visual appeal and technical excellence.
                 </p>
                 <p>
-                  At GraphiXlab, we believe that great design and technical expertise should go hand in hand. That's why we approach every project as a unique challenge that requires both creative vision and strategic thinking.
+                At GraphiXlab, the belief is that great design isn't just about aesthetics—it's about creating purposeful, engaging experiences that truly connect with users.
                 </p>
               </div>
               <div className="mt-8 flex gap-4">
