@@ -3,35 +3,22 @@ import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Send,
-  Calendar,
-  MessageSquare,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram
-} from 'lucide-react';
-
+import { Mail, Phone, MapPin, Clock, Send, Calendar, MessageSquare, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Form submission logic would go here
     console.log('Form submitted');
   };
-
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="bg-black py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white animate-fade-in">Contact Us</h1>
-            <p className="text-xl text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <p className="text-xl text-gray-300 mb-8 animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
               Ready to start your project? Get in touch with us today.
             </p>
           </div>
@@ -41,84 +28,14 @@ const Contact = () => {
       {/* Contact Form and Info */}
       <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mx-[240px] px-[102px]">
             {/* Contact Form */}
-            <div className="bg-black/70 backdrop-blur-sm p-8 rounded-xl border border-electric-blue/20 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <h3 className="text-2xl font-semibold text-white mb-6">Send Us a Message</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="name" className="text-gray-300 mb-1 block">Name</label>
-                    <Input 
-                      id="name" 
-                      placeholder="Your Name" 
-                      className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="text-gray-300 mb-1 block">Email</label>
-                    <Input 
-                      id="email" 
-                      type="email" 
-                      placeholder="Your Email" 
-                      className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white"
-                      required
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="projectType" className="text-gray-300 mb-1 block">Project Type</label>
-                  <select 
-                    id="projectType" 
-                    className="w-full bg-black/60 border border-electric-blue/30 focus:border-electric-blue text-white rounded-md p-2"
-                    required
-                  >
-                    <option value="">Select Project Type</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="ui-ux-design">UI/UX Design</option>
-                    <option value="graphic-design">Graphic Design</option>
-                    <option value="seo">SEO Optimization</option>
-                    <option value="digital-marketing">Digital Marketing</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label htmlFor="budget" className="text-gray-300 mb-1 block">Budget Range</label>
-                  <select 
-                    id="budget" 
-                    className="w-full bg-black/60 border border-electric-blue/30 focus:border-electric-blue text-white rounded-md p-2"
-                  >
-                    <option value="">Select Budget Range</option>
-                    <option value="1000-5000">$1,000 - $5,000</option>
-                    <option value="5000-10000">$5,000 - $10,000</option>
-                    <option value="10000-25000">$10,000 - $25,000</option>
-                    <option value="25000+">$25,000+</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="text-gray-300 mb-1 block">Message</label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Tell us about your project..." 
-                    className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white min-h-[150px]"
-                    required
-                  />
-                </div>
-                
-                <Button type="submit" className="btn-primary w-full">
-                  <Send className="mr-2" size={18} />
-                  Send Message
-                </Button>
-              </form>
-            </div>
+            
             
             {/* Contact Info */}
-            <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="space-y-8 animate-fade-in" style={{
+            animationDelay: '0.4s'
+          }}>
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
                 <p className="text-gray-400 mb-8">
@@ -250,10 +167,7 @@ const Contact = () => {
                 Subscribe to our newsletter for the latest updates, insights, and special offers.
               </p>
               <div className="flex">
-                <Input 
-                  placeholder="Your Email" 
-                  className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white rounded-r-none"
-                />
+                <Input placeholder="Your Email" className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white rounded-r-none" />
                 <Button className="bg-electric-blue text-white rounded-l-none">
                   Subscribe
                 </Button>
@@ -304,8 +218,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Contact;
