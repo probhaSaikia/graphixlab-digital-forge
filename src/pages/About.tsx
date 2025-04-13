@@ -9,7 +9,8 @@ import {
   Clock, 
   CheckCircle, 
   Star,
-  Globe
+  Globe,
+  MessageSquare
 } from 'lucide-react';
 
 const About = () => {
@@ -23,7 +24,27 @@ const About = () => {
     { name: 'Content Creation', level: 70 },
   ];
 
-  
+  // Testimonials data
+  const testimonials = [
+    {
+      quote: "GraphiXlab transformed our online presence completely. Their attention to detail and creative approach resulted in a website that perfectly represents our brand.",
+      author: "Rajesh Kumar",
+      position: "CEO, TechInnovate",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+    },
+    {
+      quote: "Working with GraphiXlab was a seamless experience. They understood our requirements perfectly and delivered beyond our expectations.",
+      author: "Priya Sharma",
+      position: "Marketing Director, CreativeSolutions",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+    },
+    {
+      quote: "The team at GraphiXlab is exceptional. They not only created a stunning website but also provided valuable insights to improve our digital strategy.",
+      author: "Vikram Singh",
+      position: "Founder, InnovateX",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+    }
+  ];
 
   return (
     <Layout>
