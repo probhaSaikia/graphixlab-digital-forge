@@ -1,51 +1,31 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
 
-type ThemeType = 'dark' | 'light';
+import React, { createContext, useContext } from 'react';
+
+type ThemeType = 'dark';
 
 interface ThemeContextType {
   theme: ThemeType;
-  toggleTheme: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  // Always default to dark theme
-  const [theme, setTheme] = useState<ThemeType>('dark');
+  // Always use dark theme
+  const theme: ThemeType = 'dark';
 
-  useEffect(() => {
-    // Check if there's a saved theme preference
-    const savedTheme = localStorage.getItem('theme');
+  React.useEffect(() => {
+    // Set dark theme on document elements
+    const root = window.document.documentElement;
+    root.classList.remove('light');
+    root.classList.add('dark');
     
-    // Only use the saved theme if it exists, otherwise keep the default 'dark'
-    if (savedTheme === 'light' || savedTheme === 'dark') {
-      setTheme(savedTheme);
-    } else {
-      // If no saved theme, set dark as default and save it
-      localStorage.setItem('theme', 'dark');
-    }
+    // Also add class to body
+    document.body.classList.remove('light');
+    document.body.classList.add('dark');
   }, []);
 
-  useEffect(() => {
-    // Update localStorage when theme changes
-    localStorage.setItem('theme', theme);
-    
-    // Update document class for tailwind theme
-    const root = window.document.documentElement;
-    root.classList.remove('light', 'dark');
-    root.classList.add(theme);
-    
-    // Also add class to body for additional styling
-    document.body.classList.remove('light', 'dark');
-    document.body.classList.add(theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
-  };
-
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme }}>
       {children}
     </ThemeContext.Provider>
   );

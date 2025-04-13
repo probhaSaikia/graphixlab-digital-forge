@@ -15,16 +15,13 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Home, Layout as LayoutIcon } from "lucide-react";
-import { useTheme } from '@/context/ThemeContext';
 
 const Index = () => {
-  const { theme } = useTheme();
-  
   return (
     <Layout>
       <div className="relative">
         {/* Breadcrumb appears above hero */}
-        <div className={`container mx-auto py-4 px-4 ${theme === 'light' ? 'text-navy' : 'text-white/80'}`}>
+        <div className="container mx-auto py-4 px-4 text-white/80">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
