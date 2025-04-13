@@ -64,6 +64,7 @@ export default {
         coral: '#FF6B6B',
         'neon-pink': '#FF26D9', // Updated to match the bright pink in the image
         'dark-bg': '#050709', // New color for the very dark background in the image
+        'deep-black': '#030303', // Adding the new darker black from your image
       },
       borderRadius: {
         lg: 'var(--radius)',

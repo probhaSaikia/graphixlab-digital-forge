@@ -29,8 +29,8 @@ const Navbar = () => {
   }, [scrolled]);
 
   const navBgClass = scrolled 
-    ? 'bg-black/95 backdrop-blur-md shadow-lg' 
-    : 'bg-black/80 backdrop-blur-sm';
+    ? 'bg-deep-black/95 backdrop-blur-md shadow-lg' 
+    : 'bg-deep-black/90 backdrop-blur-sm';
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${navBgClass} border-b border-electric-blue/20`}>
@@ -89,7 +89,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-navy/95 backdrop-blur-md border-b border-electric-blue/20 py-4 px-4 animate-fade-in">
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-deep-black/95 backdrop-blur-md border-b border-electric-blue/20 py-4 px-4 animate-fade-in">
           <div className="flex flex-col space-y-4">
             <Link 
               to="/" 
