@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Layout from '@/components/Layout';
-import HeroSection from '@/components/home/HeroSection';
+import { HeroGeometric } from '@/components/ui/shape-landing-hero';
 import ServicesSection from '@/components/home/ServicesSection';
 import WhyChooseUsSection from '@/components/home/WhyChooseUsSection';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
@@ -11,24 +11,13 @@ const Index = () => {
   return (
     <Layout>
       <div className="relative">
-        {/* Decorative elements that follow cursor with parallax effect */}
-        <div className="fixed inset-0 pointer-events-none z-0 opacity-70 hidden md:block">
-          {Array.from({ length: 20 }).map((_, i) => (
-            <div 
-              key={i}
-              className="absolute w-1 h-1 bg-white rounded-full"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                opacity: Math.random() * 0.5 + 0.3,
-                animation: `pulse-slow ${2 + Math.random() * 3}s infinite`,
-                animationDelay: `${Math.random() * 2}s`
-              }}
-            ></div>
-          ))}
-        </div>
+        <HeroGeometric 
+          badge="GraphiXlab Studio"
+          title1="Elevate Your Digital"
+          title2="Presence With Style"
+        />
         
-        <HeroSection />
+        <ServicesSection />
         
         {/* Glowing divider */}
         <div className="relative">
@@ -38,7 +27,7 @@ const Index = () => {
           </div>
         </div>
         
-        <ServicesSection />
+        <WhyChooseUsSection />
         
         {/* Another fancy divider */}
         <div className="relative py-10">
@@ -60,7 +49,6 @@ const Index = () => {
           </div>
         </div>
         
-        <WhyChooseUsSection />
         <PortfolioPreview />
         <ContactSection />
       </div>
