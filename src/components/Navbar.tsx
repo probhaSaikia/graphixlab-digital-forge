@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -40,7 +39,7 @@ const Navbar = () => {
             />
           </div>
           <span className="text-2xl font-poppins font-bold text-white tracking-tight">
-            Graphi<span className="text-electric-blue">X</span><span className="text-[#FF52FF]">lab</span>
+            Graphi<span className="text-[#FF52FF]">X</span><span className="text-white">lab</span>
           </span>
         </Link>
 
