@@ -67,15 +67,13 @@
     --input: 217 33% 25%;
     --ring: 187 100% 50%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-deep-black text-foreground font-inter;
     background-color: #030303;
     background-image: 
       radial-gradient(circle at 25% 25%, rgba(0, 225, 255, 0.03) 0%, transparent 50%),

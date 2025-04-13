@@ -23,7 +23,7 @@ const Layout = ({ children }: LayoutProps) => {
       </div>
       
       <Navbar />
-      <main className="flex-grow pt-16">
+      <main className="flex-grow pt-16 bg-deep-black">
         {children}
       </main>
       <Footer />
