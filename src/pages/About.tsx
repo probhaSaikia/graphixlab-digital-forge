@@ -23,27 +23,7 @@ const About = () => {
     { name: 'Content Creation', level: 70 },
   ];
 
-  // Testimonials data
-  const testimonials = [
-    {
-      quote: "GraphiXlab transformed our online presence completely. Their strategic approach to our website redesign and SEO optimization resulted in a 200% increase in organic traffic within just 3 months.",
-      author: "Sarah Johnson",
-      position: "CEO, TechStart Inc.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
-    },
-    {
-      quote: "Working with GraphiXlab was a game-changer for our brand. They understood our vision perfectly and delivered a stunning design that truly represents who we are.",
-      author: "Michael Chen",
-      position: "Marketing Director, Elevate Solutions",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
-    },
-    {
-      quote: "The team at GraphiXlab provided exceptional service from start to finish. They're responsive, creative, and truly care about delivering results that exceed expectations.",
-      author: "Emily Rodriguez",
-      position: "Founder, Artisan Crafts",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e"
-    },
-  ];
+  
 
   return (
     <Layout>
