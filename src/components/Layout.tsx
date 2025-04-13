@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
   const { theme } = useTheme();
   
   return (
-    <div className="flex flex-col min-h-screen relative overflow-hidden bg-dark-bg text-foreground">
+    <div className="flex flex-col min-h-screen relative overflow-hidden bg-black text-foreground">
       {/* Animated gradient orbs */}
       <div className="fixed top-0 left-0 w-full h-full -z-10 opacity-30 pointer-events-none">
         {/* Cyan/Teal blue orb */}

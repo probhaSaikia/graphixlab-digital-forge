@@ -89,7 +89,7 @@ const Services = () => {
   const renderServiceCards = (services: any[]) => (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {services.map((service, index) => (
-        <Card key={index} className="bg-navy border border-electric-blue/20 card-hover">
+        <Card key={index} className="bg-black border border-electric-blue/20 card-hover">
           <CardHeader>
             <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-electric-blue/10 mb-4">
               {service.icon}
@@ -107,7 +107,7 @@ const Services = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-navy/90 py-20 md:py-28">
+      <section className="bg-black py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white animate-fade-in">Our Services</h1>
@@ -119,7 +119,7 @@ const Services = () => {
       </section>
 
       {/* Services Categories */}
-      <section className="py-16 bg-charcoal">
+      <section className="py-16 bg-black border-t border-electric-blue/10">
         <div className="container mx-auto px-4">
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">Web & Tech</h2>
@@ -142,7 +142,7 @@ const Services = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 bg-navy">
+      <section className="py-16 bg-black border-t border-electric-blue/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing Plans</h2>
@@ -153,7 +153,7 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Basic Plan */}
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-8 hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
+            <div className="bg-black border border-electric-blue/20 rounded-xl p-8 hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
               <h3 className="text-xl font-medium text-gray-300 mb-2">Basic</h3>
               <div className="mb-6">
                 <span className="text-4xl font-bold text-white">$999</span>
@@ -189,8 +189,8 @@ const Services = () => {
             </div>
 
             {/* Pro Plan */}
-            <div className="bg-navy/60 border border-electric-blue rounded-xl p-8 shadow-lg shadow-electric-blue/20 transform scale-105 z-10">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-electric-blue text-navy px-4 py-1 rounded-full text-sm font-semibold">
+            <div className="bg-black border border-electric-blue rounded-xl p-8 shadow-lg shadow-electric-blue/20 transform scale-105 z-10">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-electric-blue text-black px-4 py-1 rounded-full text-sm font-semibold">
                 Most Popular
               </div>
               <h3 className="text-xl font-medium text-gray-300 mb-2">Pro</h3>
@@ -228,7 +228,7 @@ const Services = () => {
             </div>
 
             {/* Enterprise Plan */}
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-8 hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
+            <div className="bg-black border border-electric-blue/20 rounded-xl p-8 hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
               <h3 className="text-xl font-medium text-gray-300 mb-2">Enterprise</h3>
               <div className="mb-6">
                 <span className="text-4xl font-bold text-white">Custom</span>

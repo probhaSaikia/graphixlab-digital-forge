@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
@@ -98,13 +99,13 @@ const Portfolio = () => {
   return (
     <Layout>
       {/* Hero Section - Enhanced with Electric Blue */}
-      <section className="bg-electric-blue/10 dark:bg-electric-blue/5 py-20 md:py-28 border-b border-electric-blue/20">
+      <section className="bg-black border-b border-electric-blue/20 py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto">
             <Breadcrumb className="mb-6">
               <BreadcrumbList>
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="/" className="inline-flex items-center gap-1.5 text-navy dark:text-white/80">
+                  <BreadcrumbLink href="/" className="inline-flex items-center gap-1.5 text-gray-400">
                     <Globe size={16} strokeWidth={2} aria-hidden="true" />
                     Home
                   </BreadcrumbLink>
@@ -117,8 +118,8 @@ const Portfolio = () => {
             </Breadcrumb>
             
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-navy dark:text-white neon-text">Project Portfolio</h1>
-              <p className="text-xl text-navy/70 dark:text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white neon-text">Project Portfolio</h1>
+              <p className="text-xl text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 Showcasing my educational website project and design concepts with a focus on creativity and functionality.
               </p>
             </div>
@@ -127,7 +128,7 @@ const Portfolio = () => {
       </section>
 
       {/* Portfolio Filter */}
-      <section className="py-12 bg-electric-blue/5 dark:bg-charcoal">
+      <section className="py-12 bg-black border-t border-electric-blue/10">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category, index) => (
@@ -137,7 +138,7 @@ const Portfolio = () => {
                 className={
                   activeCategory === category 
                     ? 'bg-electric-blue text-white border-none' 
-                    : 'bg-transparent border border-electric-blue/30 text-navy dark:text-white hover:bg-electric-blue/10'
+                    : 'bg-transparent border border-electric-blue/30 text-white hover:bg-electric-blue/10'
                 }
                 onClick={() => setActiveCategory(category)}
               >
@@ -148,22 +149,22 @@ const Portfolio = () => {
 
           {/* Featured Educational Project */}
           {featuredProject && (activeCategory === 'All' || activeCategory === featuredProject.category) && (
-            <div className="mb-16 bg-electric-blue/10 dark:bg-navy/60 rounded-xl overflow-hidden border border-electric-blue/20">
+            <div className="mb-16 bg-black/80 rounded-xl overflow-hidden border border-electric-blue/20">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="p-8 lg:p-12">
                   <span className="text-electric-blue font-medium mb-2 block">FEATURED EDUCATIONAL PROJECT</span>
-                  <h3 className="text-2xl md:text-3xl font-bold text-navy dark:text-white mb-4">{featuredProject.title}</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{featuredProject.title}</h3>
                   <div className="space-y-4 mb-6">
                     <div>
-                      <h4 className="text-navy dark:text-white font-semibold mb-1">Overview</h4>
-                      <p className="text-navy/70 dark:text-gray-300">
+                      <h4 className="text-white font-semibold mb-1">Overview</h4>
+                      <p className="text-gray-300">
                         A complete educational website developed for Harshi Excellence Academy to showcase their courses, 
                         faculty, and provide an easy way for students to enroll in programs.
                       </p>
                     </div>
                     <div>
-                      <h4 className="text-navy dark:text-white font-semibold mb-1">Features Implemented</h4>
-                      <ul className="text-navy/70 dark:text-gray-300 space-y-1">
+                      <h4 className="text-white font-semibold mb-1">Features Implemented</h4>
+                      <ul className="text-gray-300 space-y-1">
                         <li className="flex items-center">
                           <GraduationCap size={16} className="text-electric-blue mr-2" />
                           Course catalog with detailed descriptions
@@ -193,7 +194,7 @@ const Portfolio = () => {
                     </a>
                   </Button>
                 </div>
-                <div className="bg-electric-blue/5 dark:bg-charcoal flex items-center justify-center p-8">
+                <div className="bg-black flex items-center justify-center p-8">
                   <img 
                     src={featuredProject.image} 
                     alt={featuredProject.title} 
@@ -207,7 +208,7 @@ const Portfolio = () => {
           {/* Other Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.filter(project => !project.featured).map((project) => (
-              <div key={project.id} className="bg-white dark:bg-navy rounded-xl overflow-hidden border border-electric-blue/20 card-hover shadow-sm hover:shadow-electric-blue/20 transition-shadow">
+              <div key={project.id} className="bg-black rounded-xl overflow-hidden border border-electric-blue/20 card-hover shadow-sm hover:shadow-electric-blue/20 transition-shadow">
                 <div className="aspect-video relative overflow-hidden">
                   <img 
                     src={project.image} 
@@ -219,8 +220,8 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-navy dark:text-white mb-2">{project.title}</h3>
-                  <p className="text-navy/70 dark:text-gray-400 mb-4">{project.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                  <p className="text-gray-400 mb-4">{project.description}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-electric-blue font-medium">Results: {project.results}</span>
                     {project.link ? (
@@ -228,14 +229,14 @@ const Portfolio = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-navy dark:text-white flex items-center hover:text-electric-blue transition-colors"
+                        className="text-white flex items-center hover:text-electric-blue transition-colors"
                       >
                         Visit <ExternalLink size={16} className="ml-1" />
                       </a>
                     ) : (
                       <Link 
                         to={`/portfolio/${project.id}`} 
-                        className="text-navy dark:text-white flex items-center hover:text-electric-blue transition-colors"
+                        className="text-white flex items-center hover:text-electric-blue transition-colors"
                       >
                         Details <ArrowRight size={16} className="ml-1" />
                       </Link>
@@ -248,8 +249,8 @@ const Portfolio = () => {
 
           {/* CTA Section */}
           <div className="mt-16 text-center">
-            <h2 className="text-3xl font-bold text-navy dark:text-white mb-4">Ready to Discuss Your Project?</h2>
-            <p className="text-navy/70 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Discuss Your Project?</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto mb-8">
               Let me help you bring your educational or business website vision to life.
             </p>
             <Button asChild className="btn-primary bg-electric-blue hover:bg-electric-blue/90">
