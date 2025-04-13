@@ -1,6 +1,7 @@
 
 import React from 'react';
 import AdvancedContactForm from '@/components/contact/AdvancedContactForm';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import { motion } from 'framer-motion';
 import { 
   Mail, 
@@ -11,6 +12,9 @@ import {
 const ContactSection = () => {
   return (
     <section className="py-20 bg-black relative border-t border-electric-blue/20">
+      {/* WhatsApp Button */}
+      <WhatsAppButton />
+      
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-20 overflow-hidden pointer-events-none">
         <motion.div 
@@ -96,7 +100,7 @@ const ContactSection = () => {
                     7002642149
                   </a>
                   <p className="text-gray-500 text-sm mt-1">
-                    Mon-Fri, 9am-5pm EST
+                    Mon-Fri, 9:30am-5:30pm IST
                   </p>
                 </div>
               </motion.div>
@@ -128,7 +132,7 @@ const ContactSection = () => {
                 className="bg-black/60 p-6 rounded-lg border border-electric-blue/20 mt-8 hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300"
               >
                 <h4 className="text-white font-semibold mb-3">Ready to get started?</h4>
-                <p className="text-gray-400 mb-4">Take the first step towards transforming your digital presence.</p>
+                <p className="text-gray-400 mb-4">Take the first step towards transforming your digital presence. Packages start at ₹9,999.</p>
                 <a href="/contact" className="block w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white text-center font-semibold py-3 px-6 rounded-md hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1">
                   Start Your Project
                 </a>

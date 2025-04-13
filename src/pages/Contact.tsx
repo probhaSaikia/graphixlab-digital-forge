@@ -1,10 +1,10 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import AdvancedContactForm from '@/components/contact/AdvancedContactForm';
 import BookingScheduler from '@/components/contact/BookingScheduler';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import { motion } from 'framer-motion';
 import { 
   Mail, 
@@ -35,6 +35,9 @@ const Contact = () => {
 
   return (
     <Layout>
+      {/* WhatsApp Button */}
+      <WhatsAppButton />
+      
       {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0 }}
@@ -270,7 +273,7 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Schedule a Call</h3>
               <p className="text-gray-400 mb-6">
-                Book a convenient time for a 30-minute consultation to discuss your project.
+                Book a convenient time for a 30-minute consultation to discuss your project. Starting at ₹999.
               </p>
               <Button className="btn-primary w-full bg-gradient-to-r from-electric-blue to-[#FF52FF]">Book a Call</Button>
             </motion.div>
@@ -287,7 +290,7 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Live Chat</h3>
               <p className="text-gray-400 mb-6">
-                Chat with one of our representatives for immediate assistance during business hours.
+                Chat with one of our representatives for immediate assistance during business hours (9:30 AM - 5:30 PM IST).
               </p>
               <Button className="btn-primary w-full bg-gradient-to-r from-electric-blue to-[#FF52FF]">Start Chat</Button>
             </motion.div>

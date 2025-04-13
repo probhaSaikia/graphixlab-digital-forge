@@ -36,7 +36,7 @@ const BookingScheduler = () => {
           <Clock className="text-electric-blue mr-4" size={24} />
           <div>
             <h4 className="text-white font-medium">Select a Time Slot</h4>
-            <p className="text-gray-400 text-sm">9:00 AM - 5:00 PM EST</p>
+            <p className="text-gray-400 text-sm">9:30 AM - 5:30 PM IST</p>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ const BookingScheduler = () => {
         >
           <div className="relative pb-[780px] w-full h-0">
             <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLSd8UYBRWyhiM92SCb5S32TZs7zALEiZ0JZS5F2zRJaVcZm0_w/viewform?embedded=true" 
+              src="https://forms.gle/dHWmQ9C26PjW6mH99" 
               className="absolute top-0 left-0 w-full h-full bg-black/80"
               frameBorder="0"
               marginHeight={0}
@@ -85,7 +85,7 @@ const BookingScheduler = () => {
           </div>
           <div className="absolute bottom-2 right-2 z-10">
             <a 
-              href="https://docs.google.com/forms/d/e/1FAIpQLSd8UYBRWyhiM92SCb5S32TZs7zALEiZ0JZS5F2zRJaVcZm0_w/viewform" 
+              href="https://forms.gle/dHWmQ9C26PjW6mH99" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center text-sm text-electric-blue hover:text-white transition-colors px-3 py-1 rounded-md bg-black/50"
