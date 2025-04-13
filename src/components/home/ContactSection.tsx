@@ -12,11 +12,11 @@ import {
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-charcoal relative">
+    <section className="py-20 bg-black relative border-t border-electric-blue/20">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-20 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-96 h-96 rounded-full bg-electric-blue/10 blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 rounded-full bg-neon-green/10 blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 rounded-full bg-neon-pink/10 blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -29,7 +29,7 @@ const ContactSection = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Contact Form */}
-          <div className="bg-navy/70 backdrop-blur-sm p-8 rounded-xl border border-electric-blue/20 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="bg-black/70 backdrop-blur-sm p-8 rounded-xl border border-electric-blue/20 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-2xl font-semibold text-white mb-6">Send Us a Message</h3>
             
             <form className="space-y-5">
@@ -39,7 +39,7 @@ const ContactSection = () => {
                   <Input 
                     id="name" 
                     placeholder="Your Name" 
-                    className="bg-navy/60 border-electric-blue/30 focus:border-electric-blue text-white"
+                    className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white"
                   />
                 </div>
                 <div>
@@ -48,7 +48,7 @@ const ContactSection = () => {
                     id="email" 
                     type="email" 
                     placeholder="Your Email" 
-                    className="bg-navy/60 border-electric-blue/30 focus:border-electric-blue text-white"
+                    className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white"
                   />
                 </div>
               </div>
@@ -58,7 +58,7 @@ const ContactSection = () => {
                 <Input 
                   id="subject" 
                   placeholder="Project Inquiry" 
-                  className="bg-navy/60 border-electric-blue/30 focus:border-electric-blue text-white"
+                  className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white"
                 />
               </div>
               
@@ -67,7 +67,7 @@ const ContactSection = () => {
                 <Textarea 
                   id="message" 
                   placeholder="Tell us about your project..." 
-                  className="bg-navy/60 border-electric-blue/30 focus:border-electric-blue text-white min-h-[120px]"
+                  className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white min-h-[120px]"
                 />
               </div>
               
@@ -128,7 +128,7 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="bg-navy/60 p-6 rounded-lg border border-electric-blue/20 mt-8">
+              <div className="bg-black/60 p-6 rounded-lg border border-electric-blue/20 mt-8">
                 <h4 className="text-white font-semibold mb-3">Ready to get started?</h4>
                 <p className="text-gray-400 mb-4">Take the first step towards transforming your digital presence.</p>
                 <Button className="btn-primary w-full">

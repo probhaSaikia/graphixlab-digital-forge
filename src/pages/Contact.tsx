@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
@@ -28,7 +27,7 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-navy/90 py-20 md:py-28">
+      <section className="bg-black py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white animate-fade-in">Contact Us</h1>
@@ -40,11 +39,11 @@ const Contact = () => {
       </section>
 
       {/* Contact Form and Info */}
-      <section className="py-16 bg-charcoal">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-navy/70 backdrop-blur-sm p-8 rounded-xl border border-electric-blue/20 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="bg-black/70 backdrop-blur-sm p-8 rounded-xl border border-electric-blue/20 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <h3 className="text-2xl font-semibold text-white mb-6">Send Us a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -54,7 +53,7 @@ const Contact = () => {
                     <Input 
                       id="name" 
                       placeholder="Your Name" 
-                      className="bg-navy/60 border-electric-blue/30 focus:border-electric-blue text-white"
+                      className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white"
                       required
                     />
                   </div>
@@ -64,7 +63,7 @@ const Contact = () => {
                       id="email" 
                       type="email" 
                       placeholder="Your Email" 
-                      className="bg-navy/60 border-electric-blue/30 focus:border-electric-blue text-white"
+                      className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white"
                       required
                     />
                   </div>
@@ -74,7 +73,7 @@ const Contact = () => {
                   <label htmlFor="projectType" className="text-gray-300 mb-1 block">Project Type</label>
                   <select 
                     id="projectType" 
-                    className="w-full bg-navy/60 border border-electric-blue/30 focus:border-electric-blue text-white rounded-md p-2"
+                    className="w-full bg-black/60 border border-electric-blue/30 focus:border-electric-blue text-white rounded-md p-2"
                     required
                   >
                     <option value="">Select Project Type</option>
@@ -91,7 +90,7 @@ const Contact = () => {
                   <label htmlFor="budget" className="text-gray-300 mb-1 block">Budget Range</label>
                   <select 
                     id="budget" 
-                    className="w-full bg-navy/60 border border-electric-blue/30 focus:border-electric-blue text-white rounded-md p-2"
+                    className="w-full bg-black/60 border border-electric-blue/30 focus:border-electric-blue text-white rounded-md p-2"
                   >
                     <option value="">Select Budget Range</option>
                     <option value="1000-5000">$1,000 - $5,000</option>
@@ -106,7 +105,7 @@ const Contact = () => {
                   <Textarea 
                     id="message" 
                     placeholder="Tell us about your project..." 
-                    className="bg-navy/60 border-electric-blue/30 focus:border-electric-blue text-white min-h-[150px]"
+                    className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white min-h-[150px]"
                     required
                   />
                 </div>
@@ -210,7 +209,7 @@ const Contact = () => {
       </section>
 
       {/* Alternative Contact Methods */}
-      <section className="py-16 bg-navy">
+      <section className="py-16 bg-black border-t border-electric-blue/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Other Ways to Connect</h2>
@@ -220,7 +219,7 @@ const Contact = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-8 text-center hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
+            <div className="bg-black border border-electric-blue/20 rounded-xl p-8 text-center hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
               <div className="mx-auto w-16 h-16 rounded-full bg-electric-blue/10 flex items-center justify-center mb-6">
                 <Calendar className="text-electric-blue" size={28} />
               </div>
@@ -231,7 +230,7 @@ const Contact = () => {
               <Button className="btn-primary w-full">Book a Call</Button>
             </div>
             
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-8 text-center hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
+            <div className="bg-black border border-electric-blue/20 rounded-xl p-8 text-center hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
               <div className="mx-auto w-16 h-16 rounded-full bg-electric-blue/10 flex items-center justify-center mb-6">
                 <MessageSquare className="text-electric-blue" size={28} />
               </div>
@@ -242,7 +241,7 @@ const Contact = () => {
               <Button className="btn-primary w-full">Start Chat</Button>
             </div>
             
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-8 text-center hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
+            <div className="bg-black border border-electric-blue/20 rounded-xl p-8 text-center hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
               <div className="mx-auto w-16 h-16 rounded-full bg-electric-blue/10 flex items-center justify-center mb-6">
                 <Mail className="text-electric-blue" size={28} />
               </div>
@@ -253,7 +252,7 @@ const Contact = () => {
               <div className="flex">
                 <Input 
                   placeholder="Your Email" 
-                  className="bg-navy/60 border-electric-blue/30 focus:border-electric-blue text-white rounded-r-none"
+                  className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white rounded-r-none"
                 />
                 <Button className="bg-electric-blue text-white rounded-l-none">
                   Subscribe
@@ -265,7 +264,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-charcoal">
+      <section className="py-16 bg-black border-t border-electric-blue/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
@@ -275,28 +274,28 @@ const Contact = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-6">
+            <div className="bg-black border border-electric-blue/20 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-white mb-3">What is your typical process for a new project?</h3>
               <p className="text-gray-400">
                 Our process includes an initial consultation, proposal, design approval, development, testing, and launch. We keep you involved at every step to ensure the final product meets your expectations.
               </p>
             </div>
             
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-6">
+            <div className="bg-black border border-electric-blue/20 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-white mb-3">How long does it take to complete a website?</h3>
               <p className="text-gray-400">
                 Project timelines vary based on complexity, but a typical website takes 4-8 weeks from start to finish. Custom web applications may take longer depending on the features required.
               </p>
             </div>
             
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-6">
+            <div className="bg-black border border-electric-blue/20 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-white mb-3">Do you offer maintenance services?</h3>
               <p className="text-gray-400">
                 Yes, we offer ongoing maintenance and support packages to keep your website secure, up-to-date, and performing optimally. We can tailor a maintenance plan to suit your specific needs.
               </p>
             </div>
             
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-6">
+            <div className="bg-black border border-electric-blue/20 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-white mb-3">What payment methods do you accept?</h3>
               <p className="text-gray-400">
                 We accept various payment methods including credit cards, bank transfers, and PayPal. We typically require a 50% deposit to begin work, with the remainder due upon completion.
