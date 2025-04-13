@@ -59,10 +59,11 @@ export default {
         },
         navy: '#0A192F',
         charcoal: '#2D2D2D',
-        'electric-blue': '#00B4D8',
+        'electric-blue': '#00E1FF', // Updated to be more cyan/teal like in the image
         'neon-green': '#7CFC00',
         coral: '#FF6B6B',
-        'neon-pink': '#FF52FF',
+        'neon-pink': '#FF26D9', // Updated to match the bright pink in the image
+        'dark-bg': '#050709', // New color for the very dark background in the image
       },
       borderRadius: {
         lg: 'var(--radius)',

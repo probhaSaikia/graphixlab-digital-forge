@@ -98,7 +98,7 @@ function HeroGeometric({
     };
 
     return (
-        <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
+        <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-dark-bg">
             <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/[0.05] via-transparent to-neon-pink/[0.05] blur-3xl" />
 
             <div className="absolute inset-0 overflow-hidden">
@@ -174,12 +174,7 @@ function HeroGeometric({
                                 {title1}
                             </span>
                             <br />
-                            <span
-                                className={cn(
-                                    "bg-clip-text text-transparent",
-                                    "bg-gradient-to-r from-electric-blue via-white/90 to-neon-pink"
-                                )}
-                            >
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-electric-blue via-white/90 to-neon-pink">
                                 {title2}
                             </span>
                         </h1>
@@ -214,7 +209,7 @@ function HeroGeometric({
                 </div>
             </div>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-dark-bg/80 pointer-events-none" />
         </div>
     );
 }
