@@ -1,23 +1,33 @@
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, ArrowRight } from 'lucide-react';
+import { ExternalLink, ArrowRight, GraduationCap, Book, Users, Globe, Mail, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 const Portfolio = () => {
   // Portfolio categories
-  const categories = ['All', 'Web Development', 'UI/UX Design', 'Graphic Design', 'Digital Marketing'];
+  const categories = ['All', 'Educational', 'Web Development', 'UI/UX Design', 'Graphic Design'];
   const [activeCategory, setActiveCategory] = useState('All');
 
   // Portfolio projects
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Website Redesign',
-      category: 'Web Development',
-      description: 'Complete redesign of an e-commerce platform with improved user experience and conversion rate optimization.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
-      results: '+150% conversion rate',
+      title: 'Harshi Excellence Academy',
+      category: 'Educational',
+      description: 'A comprehensive educational website designed for an academy offering various courses, with student enrollment and information resources.',
+      image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8',
+      results: 'Live Educational Website',
+      link: 'https://harshiexcellenceacademy.com',
+      featured: true
     },
     {
       id: 2,
@@ -46,7 +56,7 @@ const Portfolio = () => {
     {
       id: 5,
       title: 'SEO Optimization Campaign',
-      category: 'Digital Marketing',
+      category: 'Web Development',
       description: 'Comprehensive SEO strategy leading to significant improvements in search engine rankings and organic traffic.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
       results: 'Organic traffic +200%',
@@ -62,7 +72,7 @@ const Portfolio = () => {
     {
       id: 7,
       title: 'Digital Marketing Campaign',
-      category: 'Digital Marketing',
+      category: 'Web Development',
       description: 'Multi-channel digital marketing campaign including social media, email, and paid advertising.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f',
       results: 'ROI 300%',
@@ -82,16 +92,36 @@ const Portfolio = () => {
     ? projects 
     : projects.filter(project => project.category === activeCategory);
 
+  // Featured project (Harshi Excellence Academy)
+  const featuredProject = projects.find(project => project.featured);
+
   return (
     <Layout>
       {/* Hero Section - Enhanced with Electric Blue */}
       <section className="bg-electric-blue/10 dark:bg-electric-blue/5 py-20 md:py-28 border-b border-electric-blue/20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-navy dark:text-white neon-text">Our Portfolio</h1>
-            <p className="text-xl text-navy/70 dark:text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Showcasing our creative work and digital solutions that drive results with a touch of electric blue innovation.
-            </p>
+          <div className="mx-auto">
+            <Breadcrumb className="mb-6">
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/" className="inline-flex items-center gap-1.5 text-navy dark:text-white/80">
+                    <Globe size={16} strokeWidth={2} aria-hidden="true" />
+                    Home
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="text-electric-blue">Portfolio</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+            
+            <div className="max-w-3xl">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-navy dark:text-white neon-text">Project Portfolio</h1>
+              <p className="text-xl text-navy/70 dark:text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                Showcasing my educational website project and design concepts with a focus on creativity and functionality.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -116,9 +146,67 @@ const Portfolio = () => {
             ))}
           </div>
 
-          {/* Projects Grid - Added Electric Blue Accents */}
+          {/* Featured Educational Project */}
+          {featuredProject && (activeCategory === 'All' || activeCategory === featuredProject.category) && (
+            <div className="mb-16 bg-electric-blue/10 dark:bg-navy/60 rounded-xl overflow-hidden border border-electric-blue/20">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="p-8 lg:p-12">
+                  <span className="text-electric-blue font-medium mb-2 block">FEATURED EDUCATIONAL PROJECT</span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-navy dark:text-white mb-4">{featuredProject.title}</h3>
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <h4 className="text-navy dark:text-white font-semibold mb-1">Overview</h4>
+                      <p className="text-navy/70 dark:text-gray-300">
+                        A complete educational website developed for Harshi Excellence Academy to showcase their courses, 
+                        faculty, and provide an easy way for students to enroll in programs.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-navy dark:text-white font-semibold mb-1">Features Implemented</h4>
+                      <ul className="text-navy/70 dark:text-gray-300 space-y-1">
+                        <li className="flex items-center">
+                          <GraduationCap size={16} className="text-electric-blue mr-2" />
+                          Course catalog with detailed descriptions
+                        </li>
+                        <li className="flex items-center">
+                          <Book size={16} className="text-electric-blue mr-2" />
+                          Educational resources and learning materials
+                        </li>
+                        <li className="flex items-center">
+                          <Users size={16} className="text-electric-blue mr-2" />
+                          Faculty profiles and testimonials section
+                        </li>
+                        <li className="flex items-center">
+                          <Mail size={16} className="text-electric-blue mr-2" />
+                          Contact and enrollment forms
+                        </li>
+                        <li className="flex items-center">
+                          <Smartphone size={16} className="text-electric-blue mr-2" />
+                          Fully responsive design for all devices
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <Button asChild className="btn-primary flex items-center bg-electric-blue hover:bg-electric-blue/90">
+                    <a href={featuredProject.link} target="_blank" rel="noopener noreferrer">
+                      Visit Website <ExternalLink size={16} className="ml-2" />
+                    </a>
+                  </Button>
+                </div>
+                <div className="bg-electric-blue/5 dark:bg-charcoal flex items-center justify-center p-8">
+                  <img 
+                    src={featuredProject.image} 
+                    alt={featuredProject.title} 
+                    className="rounded-lg max-h-[400px] object-cover shadow-lg border border-electric-blue/20"
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Other Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
+            {filteredProjects.filter(project => !project.featured).map((project) => (
               <div key={project.id} className="bg-white dark:bg-navy rounded-xl overflow-hidden border border-electric-blue/20 card-hover shadow-sm hover:shadow-electric-blue/20 transition-shadow">
                 <div className="aspect-video relative overflow-hidden">
                   <img 
@@ -135,81 +223,39 @@ const Portfolio = () => {
                   <p className="text-navy/70 dark:text-gray-400 mb-4">{project.description}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-electric-blue font-medium">Results: {project.results}</span>
-                    <Link 
-                      to={`/portfolio/${project.id}`} 
-                      className="text-navy dark:text-white flex items-center hover:text-electric-blue transition-colors"
-                    >
-                      Details <ArrowRight size={16} className="ml-1" />
-                    </Link>
+                    {project.link ? (
+                      <a 
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-navy dark:text-white flex items-center hover:text-electric-blue transition-colors"
+                      >
+                        Visit <ExternalLink size={16} className="ml-1" />
+                      </a>
+                    ) : (
+                      <Link 
+                        to={`/portfolio/${project.id}`} 
+                        className="text-navy dark:text-white flex items-center hover:text-electric-blue transition-colors"
+                      >
+                        Details <ArrowRight size={16} className="ml-1" />
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Featured Case Study - Electric Blue Theme */}
-          <div className="mt-16 bg-electric-blue/10 dark:bg-navy/60 rounded-xl overflow-hidden border border-electric-blue/20">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="p-8 lg:p-12">
-                <span className="text-electric-blue font-medium mb-2 block">FEATURED CASE STUDY</span>
-                <h3 className="text-2xl md:text-3xl font-bold text-navy dark:text-white mb-4">E-Commerce Revenue Growth</h3>
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <h4 className="text-white font-semibold mb-1">The Challenge</h4>
-                    <p className="text-gray-400">
-                      An established e-commerce brand was struggling with high cart abandonment and low conversion rates despite good traffic.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-1">Our Solution</h4>
-                    <p className="text-gray-400">
-                      We performed a complete UX audit, redesigned the checkout process, implemented A/B testing, and optimized product pages.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-1">The Results</h4>
-                    <ul className="text-gray-400 space-y-1">
-                      <li className="flex items-center">
-                        <span className="text-electric-blue mr-2">✓</span>
-                        Conversion rate increased by 135%
-                      </li>
-                      <li className="flex items-center">
-                        <span className="text-electric-blue mr-2">✓</span>
-                        Cart abandonment reduced by 42%
-                      </li>
-                      <li className="flex items-center">
-                        <span className="text-electric-blue mr-2">✓</span>
-                        Average order value increased by 28%
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <Button className="btn-primary flex items-center bg-electric-blue hover:bg-electric-blue/90">
-                  View Full Case Study <ExternalLink size={16} className="ml-2" />
-                </Button>
-              </div>
-              <div className="bg-electric-blue/10 dark:bg-charcoal flex items-center justify-center p-8">
-                <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
-                  alt="E-commerce Case Study" 
-                  className="rounded-lg max-h-[400px] object-cover shadow-lg border border-electric-blue/20"
-                />
-              </div>
-            </div>
+          {/* CTA Section */}
+          <div className="mt-16 text-center">
+            <h2 className="text-3xl font-bold text-navy dark:text-white mb-4">Ready to Discuss Your Project?</h2>
+            <p className="text-navy/70 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+              Let me help you bring your educational or business website vision to life.
+            </p>
+            <Button asChild className="btn-primary bg-electric-blue hover:bg-electric-blue/90">
+              <Link to="/contact">Get in Touch</Link>
+            </Button>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section - Electric Blue Accent */}
-      <section className="py-16 bg-electric-blue/5 dark:bg-navy">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-navy dark:text-white mb-4">Ready to Start Your Project?</h2>
-          <p className="text-navy/70 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-            Let's discuss how we can help you achieve similar results for your business.
-          </p>
-          <Button className="btn-primary bg-electric-blue hover:bg-electric-blue/90">
-            Get in Touch
-          </Button>
         </div>
       </section>
     </Layout>

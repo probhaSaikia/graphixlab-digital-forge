@@ -14,7 +14,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Home, Component } from "lucide-react";
+import { Home, Layout as LayoutIcon } from "lucide-react";
 import { useTheme } from '@/context/ThemeContext';
 
 const Index = () => {
@@ -35,7 +35,7 @@ const Index = () => {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage>Dashboard</BreadcrumbPage>
+                <BreadcrumbPage className="text-electric-blue">Dashboard</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
