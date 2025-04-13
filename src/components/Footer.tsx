@@ -1,19 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
-  Mail, 
-  Phone, 
-  MapPin 
-} from 'lucide-react';
-
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 const Footer = () => {
-  return (
-    <footer className="bg-navy border-t border-electric-blue/20 pt-16 pb-8">
+  return <footer className="bg-navy border-t border-electric-blue/20 pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Logo and Description */}
@@ -75,36 +64,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/services" className="text-gray-400 hover:text-electric-blue transition-colors">
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-400 hover:text-electric-blue transition-colors">
-                  SEO Optimization
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-400 hover:text-electric-blue transition-colors">
-                  Graphic Design
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-400 hover:text-electric-blue transition-colors">
-                  UI/UX Design
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-400 hover:text-electric-blue transition-colors">
-                  Digital Marketing
-                </Link>
-              </li>
-            </ul>
-          </div>
+          
 
           {/* Contact Info */}
           <div>
@@ -139,8 +99,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
