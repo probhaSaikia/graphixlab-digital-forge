@@ -82,7 +82,7 @@ const Navbar = () => {
           </Link>
           <Button 
             onClick={handleCall}
-            className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1 animate-pulse-slow"
+            className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1"
           >
             <Phone className="mr-2" size={18} />
             Let's Talk
