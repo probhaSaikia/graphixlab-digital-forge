@@ -21,7 +21,7 @@ const Index = () => {
     <Layout>
       <div className="relative">
         {/* Breadcrumb appears above hero */}
-        <div className="container mx-auto py-4 px-4 text-white/80">
+        <div className="container mx-auto py-4 px-4 text-white/80 bg-black">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
@@ -47,7 +47,7 @@ const Index = () => {
         <ServicesSection />
         
         {/* Glowing divider with electric-blue */}
-        <div className="relative">
+        <div className="relative bg-black">
           <div className="absolute left-1/2 -translate-x-1/2 -top-5 w-20 h-10">
             <div className="absolute w-full h-full bg-electric-blue opacity-20 blur-xl rounded-full animate-pulse-slow"></div>
             <div className="absolute w-1/2 h-1/2 left-1/4 top-1/4 bg-neon-pink opacity-30 blur-lg rounded-full animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
@@ -57,7 +57,7 @@ const Index = () => {
         <WhyChooseUsSection />
         
         {/* Fancy divider with electric-blue gradient */}
-        <div className="relative py-10">
+        <div className="relative py-10 bg-black">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center">
               <div className="h-px w-1/3 bg-gradient-to-r from-transparent to-electric-blue/50"></div>

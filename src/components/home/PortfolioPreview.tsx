@@ -46,7 +46,7 @@ const PortfolioPreview = () => {
   ];
 
   return (
-    <section className="py-20 bg-navy">
+    <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 animate-fade-in">Featured Projects</h2>
@@ -56,19 +56,19 @@ const PortfolioPreview = () => {
         </div>
         
         {/* Featured Project */}
-        <div className="mb-16 bg-electric-blue/10 dark:bg-navy/80 rounded-xl overflow-hidden border border-electric-blue/20">
+        <div className="mb-16 bg-electric-blue/10 dark:bg-black border border-electric-blue/20 rounded-xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8 lg:p-12">
               <span className="text-electric-blue font-medium mb-2 block">FEATURED PROJECT</span>
-              <h3 className="text-2xl md:text-3xl font-bold text-navy dark:text-white mb-4">Harshi Excellence Academy</h3>
-              <p className="text-navy/70 dark:text-gray-300 mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Harshi Excellence Academy</h3>
+              <p className="text-gray-300 mb-6">
                 A comprehensive educational website designed to showcase courses, facilitate student enrollment, 
                 and provide informational resources for Harshi Excellence Academy.
               </p>
               <div className="space-y-4 mb-6">
                 <div>
-                  <h4 className="text-navy dark:text-white font-semibold mb-1">Key Features</h4>
-                  <ul className="text-navy/70 dark:text-gray-400 space-y-1">
+                  <h4 className="text-white font-semibold mb-1">Key Features</h4>
+                  <ul className="text-gray-400 space-y-1">
                     <li className="flex items-center">
                       <span className="text-electric-blue mr-2">✓</span>
                       Responsive design for all devices
@@ -94,7 +94,7 @@ const PortfolioPreview = () => {
                 </a>
               </Button>
             </div>
-            <div className="bg-electric-blue/5 dark:bg-charcoal flex items-center justify-center p-8">
+            <div className="bg-black flex items-center justify-center p-8">
               <img 
                 src="https://images.unsplash.com/photo-1501504905252-473c47e087f8" 
                 alt="Harshi Excellence Academy" 
@@ -116,7 +116,7 @@ const PortfolioPreview = () => {
                 alt={project.title} 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/90 to-navy/40 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/40 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-electric-blue font-medium mb-1">{project.category}</span>
                 <h3 className="text-white text-xl font-semibold mb-2">{project.title}</h3>
                 {project.link ? (

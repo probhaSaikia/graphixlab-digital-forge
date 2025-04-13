@@ -20,7 +20,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ icon, title, description, delay }: ServiceCardProps) => (
-  <Card className="bg-navy border border-electric-blue/20 card-hover animate-fade-in" style={{ animationDelay: `${delay}s` }}>
+  <Card className="bg-black border border-electric-blue/20 card-hover animate-fade-in" style={{ animationDelay: `${delay}s` }}>
     <CardHeader>
       <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-electric-blue/10 mb-4">
         {icon}
@@ -80,7 +80,7 @@ const ServicesSection = () => {
   ];
   
   return (
-    <section className="py-20 bg-navy/90">
+    <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 animate-fade-in">Our Services</h2>

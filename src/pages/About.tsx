@@ -48,7 +48,7 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-navy/90 py-20 md:py-28">
+      <section className="bg-black py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white animate-fade-in">About Us</h1>
@@ -60,7 +60,7 @@ const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-16 bg-charcoal">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -93,7 +93,7 @@ const About = () => {
                   className="rounded-lg"
                 />
               </div>
-              <div className="absolute -bottom-5 -left-5 bg-navy border border-electric-blue/20 rounded-lg p-4 shadow-lg">
+              <div className="absolute -bottom-5 -left-5 bg-black border border-electric-blue/20 rounded-lg p-4 shadow-lg">
                 <div className="flex items-center gap-4">
                   <div className="bg-electric-blue/10 rounded-full p-2">
                     <Award className="text-electric-blue" size={24} />
@@ -104,7 +104,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-5 -right-5 bg-navy border border-electric-blue/20 rounded-lg p-4 shadow-lg">
+              <div className="absolute -top-5 -right-5 bg-black border border-electric-blue/20 rounded-lg p-4 shadow-lg">
                 <div className="flex items-center gap-4">
                   <div className="bg-electric-blue/10 rounded-full p-2">
                     <Users className="text-electric-blue" size={24} />
@@ -121,7 +121,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 bg-navy">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">Our Core Values</h2>
@@ -131,7 +131,7 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-6 text-center hover:transform hover:-translate-y-2 transition-transform duration-300">
+            <div className="bg-black/60 border border-electric-blue/20 rounded-xl p-6 text-center hover:transform hover:-translate-y-2 transition-transform duration-300">
               <div className="mx-auto w-16 h-16 rounded-full bg-electric-blue/10 flex items-center justify-center mb-4">
                 <Star className="text-electric-blue" size={28} />
               </div>
@@ -141,7 +141,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-6 text-center hover:transform hover:-translate-y-2 transition-transform duration-300">
+            <div className="bg-black/60 border border-electric-blue/20 rounded-xl p-6 text-center hover:transform hover:-translate-y-2 transition-transform duration-300">
               <div className="mx-auto w-16 h-16 rounded-full bg-electric-blue/10 flex items-center justify-center mb-4">
                 <CheckCircle className="text-electric-blue" size={28} />
               </div>
@@ -151,7 +151,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-6 text-center hover:transform hover:-translate-y-2 transition-transform duration-300">
+            <div className="bg-black/60 border border-electric-blue/20 rounded-xl p-6 text-center hover:transform hover:-translate-y-2 transition-transform duration-300">
               <div className="mx-auto w-16 h-16 rounded-full bg-electric-blue/10 flex items-center justify-center mb-4">
                 <Clock className="text-electric-blue" size={28} />
               </div>
@@ -161,7 +161,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="bg-navy/60 border border-electric-blue/20 rounded-xl p-6 text-center hover:transform hover:-translate-y-2 transition-transform duration-300">
+            <div className="bg-black/60 border border-electric-blue/20 rounded-xl p-6 text-center hover:transform hover:-translate-y-2 transition-transform duration-300">
               <div className="mx-auto w-16 h-16 rounded-full bg-electric-blue/10 flex items-center justify-center mb-4">
                 <Globe className="text-electric-blue" size={28} />
               </div>
@@ -175,7 +175,7 @@ const About = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="py-16 bg-charcoal">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
@@ -191,7 +191,7 @@ const About = () => {
                       <span className="text-white">{skill.name}</span>
                       <span className="text-electric-blue">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-navy h-2 rounded-full">
+                    <div className="w-full bg-black h-2 rounded-full border border-electric-blue/10">
                       <div 
                         className="bg-electric-blue h-2 rounded-full"
                         style={{ width: `${skill.level}%` }}
@@ -203,19 +203,19 @@ const About = () => {
             </div>
             
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-navy p-8 rounded-xl text-center border border-electric-blue/20">
+              <div className="bg-black p-8 rounded-xl text-center border border-electric-blue/20">
                 <div className="text-4xl font-bold text-white mb-2">10+</div>
                 <p className="text-gray-400">Years of Experience</p>
               </div>
-              <div className="bg-navy p-8 rounded-xl text-center border border-electric-blue/20">
+              <div className="bg-black p-8 rounded-xl text-center border border-electric-blue/20">
                 <div className="text-4xl font-bold text-white mb-2">200+</div>
                 <p className="text-gray-400">Projects Completed</p>
               </div>
-              <div className="bg-navy p-8 rounded-xl text-center border border-electric-blue/20">
+              <div className="bg-black p-8 rounded-xl text-center border border-electric-blue/20">
                 <div className="text-4xl font-bold text-white mb-2">100+</div>
                 <p className="text-gray-400">Happy Clients</p>
               </div>
-              <div className="bg-navy p-8 rounded-xl text-center border border-electric-blue/20">
+              <div className="bg-black p-8 rounded-xl text-center border border-electric-blue/20">
                 <div className="text-4xl font-bold text-white mb-2">15+</div>
                 <p className="text-gray-400">Industry Awards</p>
               </div>
@@ -225,7 +225,7 @@ const About = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-navy">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">Client Testimonials</h2>
@@ -236,7 +236,7 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-navy/60 border border-electric-blue/20 rounded-xl p-8 relative card-hover">
+              <div key={index} className="bg-black/60 border border-electric-blue/20 rounded-xl p-8 relative card-hover">
                 <div className="text-electric-blue text-4xl absolute -top-4 left-6">❝</div>
                 <p className="text-gray-300 mb-6 pt-4">{testimonial.quote}</p>
                 <div className="flex items-center">
@@ -257,7 +257,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-charcoal">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Work Together?</h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
