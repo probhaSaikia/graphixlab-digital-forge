@@ -58,11 +58,11 @@ export default {
           foreground: 'hsl(var(--card-foreground))'
         },
         navy: '#0A192F',
-        'lighter-navy': '#1A2F4F',
-        'turquoise': '#00D4B4',
-        'coral': '#FF6B6B',
-        'off-white': '#F5F9FF',
         charcoal: '#2D2D2D',
+        'electric-blue': '#00B4D8',
+        'neon-green': '#7CFC00',
+        coral: '#FF6B6B',
+        'neon-pink': '#FF52FF',
       },
       borderRadius: {
         lg: 'var(--radius)',

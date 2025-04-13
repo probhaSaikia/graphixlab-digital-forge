@@ -1,15 +1,17 @@
 
 import React, { createContext, useContext } from 'react';
 
+type ThemeType = 'dark';
+
 interface ThemeContextType {
-  theme: 'dark';
+  theme: ThemeType;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  // Always use dark theme with our new color palette
-  const theme = 'dark';
+  // Always use dark theme
+  const theme: ThemeType = 'dark';
 
   React.useEffect(() => {
     // Set dark theme on document elements
