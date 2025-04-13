@@ -26,7 +26,7 @@ const Services = () => {
     {
       icon: <Search className="text-electric-blue" size={24} />,
       title: 'SEO Optimization',
-      description: 'Comprehensive SEO strategies to improve your website's visibility and ranking on search engines.',
+      description: 'Comprehensive SEO strategies to improve your website\'s visibility and ranking on search engines.',
     },
     {
       icon: <Database className="text-electric-blue" size={24} />,
