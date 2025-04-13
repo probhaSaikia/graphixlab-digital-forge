@@ -83,8 +83,8 @@ const ServicesSection = () => {
     <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 animate-fade-in">Our Services</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Services</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
             Comprehensive digital solutions to help your business thrive in the online world.
           </p>
         </div>

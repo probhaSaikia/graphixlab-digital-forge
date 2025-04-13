@@ -128,12 +128,11 @@ const ContactSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="bg-black/60 p-6 rounded-lg border border-electric-blue/20 mt-8 hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300"
+                className="bg-black/60 p-6 rounded-lg border border-electric-blue/20 mt-8 shadow-lg shadow-electric-blue/10 transition-all duration-300"
               >
                 <h4 className="text-white font-semibold mb-3">Ready to get started?</h4>
                 <p className="text-gray-400 mb-4">Take the first step towards transforming your digital presence. Packages start at ₹9,999.</p>
-                <a href="/contact" className="block w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white text-center font-semibold py-3 px-6 rounded-md hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1">
+                <a href="/contact" className="block w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white text-center font-semibold py-3 px-6 rounded-md hover:shadow-glow transition-all duration-300">
                   Start Your Project
                 </a>
               </motion.div>

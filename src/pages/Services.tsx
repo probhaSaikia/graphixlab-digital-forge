@@ -13,7 +13,8 @@ import {
   Database, 
   MonitorSmartphone, 
   Image, 
-  Server 
+  Server,
+  IndianRupee 
 } from 'lucide-react';
 
 const Services = () => {
@@ -155,8 +156,9 @@ const Services = () => {
             {/* Basic Plan */}
             <div className="bg-black border border-electric-blue/20 rounded-xl p-8 hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
               <h3 className="text-xl font-medium text-gray-300 mb-2">Basic</h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-white">$999</span>
+              <div className="mb-6 flex items-center">
+                <IndianRupee className="text-white mr-1" size={20} />
+                <span className="text-4xl font-bold text-white">9,999</span>
                 <span className="text-gray-400"> / project</span>
               </div>
               <ul className="space-y-3 mb-8">
@@ -194,8 +196,9 @@ const Services = () => {
                 Most Popular
               </div>
               <h3 className="text-xl font-medium text-gray-300 mb-2">Pro</h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-white">$2,499</span>
+              <div className="mb-6 flex items-center">
+                <IndianRupee className="text-white mr-1" size={20} />
+                <span className="text-4xl font-bold text-white">24,999</span>
                 <span className="text-gray-400"> / project</span>
               </div>
               <ul className="space-y-3 mb-8">

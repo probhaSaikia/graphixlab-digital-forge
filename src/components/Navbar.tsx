@@ -39,11 +39,11 @@ const Navbar = () => {
   };
 
   const navBgClass = scrolled 
-    ? 'bg-deep-black/95 backdrop-blur-md shadow-lg' 
-    : 'bg-deep-black/90 backdrop-blur-sm';
+    ? 'bg-deep-black/95 backdrop-blur-md shadow-lg border-b border-electric-blue/20' 
+    : 'bg-gradient-to-r from-deep-black/90 to-deep-black/80 backdrop-blur-sm';
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${navBgClass} border-b border-electric-blue/20`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${navBgClass}`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link to="/" className="flex items-center group">
           <div className="relative overflow-hidden rounded-full w-10 h-10 mr-2 border-2 border-electric-blue/50 transition-transform group-hover:scale-110">
@@ -82,7 +82,7 @@ const Navbar = () => {
           </Link>
           <Button 
             onClick={handleCall}
-            className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1"
+            className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md"
           >
             <Phone className="mr-2" size={18} />
             Let's Talk
