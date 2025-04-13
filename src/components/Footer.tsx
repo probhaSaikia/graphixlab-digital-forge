@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
-
 const Footer = () => {
   return <footer className="bg-deep-black border-t border-electric-blue/20 pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -72,12 +70,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <MapPin size={20} className="text-electric-blue mr-3 mt-1 flex-shrink-0" />
-                <span className="text-gray-400">
-                  123 Digital Avenue, Tech Hub, CA 94107
-                </span>
-              </li>
+              
               <li className="flex items-center">
                 <Phone size={20} className="text-electric-blue mr-3 flex-shrink-0" />
                 <a href="tel:+1234567890" className="text-gray-400 hover:text-electric-blue transition-colors">
