@@ -29,8 +29,8 @@ const Navbar = () => {
   }, [scrolled]);
 
   const navBgClass = scrolled 
-    ? 'bg-navy/95 backdrop-blur-md shadow-lg' 
-    : 'bg-navy/80 backdrop-blur-sm';
+    ? 'bg-black/95 backdrop-blur-md shadow-lg' 
+    : 'bg-black/80 backdrop-blur-sm';
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${navBgClass} border-b border-electric-blue/20`}>
