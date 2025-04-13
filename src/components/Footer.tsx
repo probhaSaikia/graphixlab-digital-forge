@@ -1,15 +1,14 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-deep-black border-t border-electric-blue/20 pt-16 pb-8">
+  return <footer className="bg-deep-black border-t border-electric-blue/20 pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Logo and Description */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <div className="animate-fade-in" style={{
+          animationDelay: '0.1s'
+        }}>
             <Link to="/" className="inline-block mb-4 group">
               <span className="text-2xl font-poppins font-bold text-white group-hover:text-glow transition-all duration-300">
                 Graphi<span className="text-electric-blue group-hover:pink-text-glow">X</span>lab
@@ -35,7 +34,9 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="animate-fade-in" style={{
+          animationDelay: '0.2s'
+        }}>
             <h3 className="text-white text-lg font-semibold mb-4 relative group">
               Quick Links
               <span className="absolute -bottom-1 left-0 w-12 h-0.5 bg-electric-blue rounded transition-all duration-300 group-hover:w-24"></span>
@@ -70,7 +71,9 @@ const Footer = () => {
           </div>
 
           {/* Services - Add this section */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="animate-fade-in" style={{
+          animationDelay: '0.3s'
+        }}>
             <h3 className="text-white text-lg font-semibold mb-4 relative group">
               Our Services
               <span className="absolute -bottom-1 left-0 w-12 h-0.5 bg-electric-blue rounded transition-all duration-300 group-hover:w-24"></span>
@@ -100,18 +103,15 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="animate-fade-in" style={{
+          animationDelay: '0.4s'
+        }}>
             <h3 className="text-white text-lg font-semibold mb-4 relative group">
               Contact Us
               <span className="absolute -bottom-1 left-0 w-12 h-0.5 bg-electric-blue rounded transition-all duration-300 group-hover:w-24"></span>
             </h3>
             <ul className="space-y-4">
-              <li className="flex items-center group hover-glow p-2 rounded-lg transition-all duration-300 hover:bg-electric-blue/5">
-                <MapPin size={20} className="text-electric-blue mr-3 flex-shrink-0 group-hover:animate-bounce" />
-                <span className="text-gray-400 group-hover:text-electric-blue transition-colors">
-                  123 Digital Avenue, Tech Hub, CA 94107
-                </span>
-              </li>
+              
               
               <li className="flex items-center group hover-glow p-2 rounded-lg transition-all duration-300 hover:bg-electric-blue/5">
                 <Phone size={20} className="text-electric-blue mr-3 flex-shrink-0 group-hover:animate-pulse" />
@@ -137,8 +137,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
