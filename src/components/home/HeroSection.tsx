@@ -7,8 +7,8 @@ const HeroSection = () => {
   return (
     <div className="hero-gradient relative overflow-hidden py-20 md:py-32">
       {/* Floating Elements */}
-      <div className="hidden md:block absolute top-1/4 left-1/4 w-24 h-24 rounded-full bg-electric-blue/10 animate-float" style={{ animationDelay: '0.5s' }}></div>
-      <div className="hidden md:block absolute top-1/2 right-1/3 w-16 h-16 rounded-full bg-neon-green/10 animate-float" style={{ animationDelay: '1.5s' }}></div>
+      <div className="hidden md:block absolute top-1/4 left-1/4 w-24 h-24 rounded-full bg-turquoise/10 animate-float" style={{ animationDelay: '0.5s' }}></div>
+      <div className="hidden md:block absolute top-1/2 right-1/3 w-16 h-16 rounded-full bg-turquoise/10 animate-float" style={{ animationDelay: '1.5s' }}></div>
       <div className="hidden md:block absolute bottom-1/4 right-1/4 w-32 h-32 rounded-full bg-coral/10 animate-float" style={{ animationDelay: '2.5s' }}></div>
       
       {/* Animated Code Snippets */}
@@ -23,8 +23,8 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white animate-fade-in">
-            Crafting Digital Experiences <span className="text-electric-blue">That Convert</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-off-white animate-fade-in">
+            Crafting Digital Experiences <span className="text-turquoise">That Convert</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             One agency, infinite solutions. We bring your vision to life with cutting-edge technology and creative design.
@@ -42,15 +42,15 @@ const HeroSection = () => {
           
           <div className="flex flex-col md:flex-row justify-center gap-8 text-gray-300 animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="flex items-center">
-              <Zap className="text-electric-blue mr-2" />
+              <Zap className="text-turquoise mr-2" />
               <span>Fast Turnaround</span>
             </div>
             <div className="flex items-center">
-              <PenTool className="text-electric-blue mr-2" />
+              <PenTool className="text-turquoise mr-2" />
               <span>Creative Solutions</span>
             </div>
             <div className="flex items-center">
-              <Code className="text-electric-blue mr-2" />
+              <Code className="text-turquoise mr-2" />
               <span>Technical Excellence</span>
             </div>
           </div>
