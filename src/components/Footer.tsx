@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+
 const Footer = () => {
   return <footer className="bg-deep-black border-t border-electric-blue/20 pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -18,17 +20,13 @@ const Footer = () => {
               Crafting digital experiences that convert. We bring your vision to life with cutting-edge tech and creative design.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-electric-blue transition-colors transform hover:scale-110 duration-300">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-electric-blue transition-colors transform hover:scale-110 duration-300">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-electric-blue transition-colors transform hover:scale-110 duration-300">
+              <a 
+                href="https://www.instagram.com/graphixlab.in?igsh=MWN4NGJiejBkMW9rZQ==" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-electric-blue transition-colors transform hover:scale-110 duration-300"
+              >
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-electric-blue transition-colors transform hover:scale-110 duration-300">
-                <Linkedin size={20} />
               </a>
             </div>
           </div>

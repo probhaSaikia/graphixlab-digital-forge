@@ -1,8 +1,9 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Welcome from './Welcome';
 import { useTheme } from '@/context/ThemeContext';
 
 interface LayoutProps {
@@ -12,14 +13,27 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   const { theme } = useTheme();
   const location = useLocation();
+  const [showWelcome, setShowWelcome] = useState(true);
   
   // Scroll to top when the route changes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
   
+  // Only show welcome message on first visit
+  useEffect(() => {
+    const hasVisited = sessionStorage.getItem('hasVisited');
+    if (hasVisited) {
+      setShowWelcome(false);
+    } else {
+      sessionStorage.setItem('hasVisited', 'true');
+    }
+  }, []);
+  
   return (
     <div className="flex flex-col min-h-screen relative overflow-hidden bg-deep-black text-foreground">
+      {showWelcome && <Welcome />}
+      
       {/* Static gradient background instead of animated orbs */}
       <div className="fixed top-0 left-0 w-full h-full -z-10 opacity-20 pointer-events-none">
         {/* Cyan/Teal blue static gradient */}
