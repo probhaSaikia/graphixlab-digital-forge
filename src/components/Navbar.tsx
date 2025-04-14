@@ -107,42 +107,42 @@ const Navbar = () => {
           <div className="flex flex-col space-y-4">
             <Link 
               to="/" 
-              className="text-white hover:text-electric-blue transition-colors py-2 pl-2 border-l-2 border-transparent hover:border-electric-blue"
+              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/services" 
-              className="text-white hover:text-electric-blue transition-colors py-2 pl-2 border-l-2 border-transparent hover:border-electric-blue"
+              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue"
               onClick={() => setIsOpen(false)}
             >
               Services
             </Link>
             <Link 
               to="/portfolio" 
-              className="text-white hover:text-electric-blue transition-colors py-2 pl-2 border-l-2 border-transparent hover:border-electric-blue"
+              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue"
               onClick={() => setIsOpen(false)}
             >
               Portfolio
             </Link>
             <Link 
               to="/about" 
-              className="text-white hover:text-electric-blue transition-colors py-2 pl-2 border-l-2 border-transparent hover:border-electric-blue"
+              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue"
               onClick={() => setIsOpen(false)}
             >
               About
             </Link>
             <Link 
               to="/contact" 
-              className="text-white hover:text-electric-blue transition-colors py-2 pl-2 border-l-2 border-transparent hover:border-electric-blue"
+              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>
             <Button 
               onClick={handleCall} 
-              className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md flex items-center"
+              className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md flex items-center justify-center"
             >
               <Phone className="mr-2" size={18} />
               Let's Talk

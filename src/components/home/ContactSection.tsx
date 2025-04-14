@@ -114,7 +114,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Schedule a Call</h4>
-                  <a href="/contact" className="text-gray-400 hover:text-electric-blue transition-colors">
+                  <a href="https://forms.gle/dHWmQ9C26PjW6mH99" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-electric-blue transition-colors">
                     Book a consultation
                   </a>
                   <p className="text-gray-500 text-sm mt-1">
@@ -132,7 +132,12 @@ const ContactSection = () => {
               >
                 <h4 className="text-white font-semibold mb-3">Ready to get started?</h4>
                 <p className="text-gray-400 mb-4">Take the first step towards transforming your digital presence. Packages start at ₹9,999.</p>
-                <a href="/contact" className="block w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white text-center font-semibold py-3 px-6 rounded-md hover:shadow-glow transition-all duration-300">
+                <a 
+                  href="https://forms.gle/dHWmQ9C26PjW6mH99" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="block w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white text-center font-semibold py-3 px-6 rounded-md hover:shadow-glow transition-all duration-300"
+                >
                   Start Your Project
                 </a>
               </motion.div>
