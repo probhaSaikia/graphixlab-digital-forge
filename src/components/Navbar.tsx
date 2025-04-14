@@ -61,35 +61,50 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <Link to="/" className="text-white relative overflow-hidden group flex items-center">
-            <Home size={16} className="mr-1.5 text-electric-blue" />
+            <Home 
+              size={16} 
+              className="mr-1.5 text-electric-blue transition-all duration-300 group-hover:animate-pulse group-hover:scale-110" 
+            />
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">Home</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
           <Link to="/services" className="text-white relative overflow-hidden group flex items-center">
-            <Briefcase size={16} className="mr-1.5 text-electric-blue" />
+            <Briefcase 
+              size={16} 
+              className="mr-1.5 text-electric-blue transition-all duration-300 group-hover:animate-pulse group-hover:scale-110 group-hover:rotate-12" 
+            />
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">Services</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
           <Link to="/portfolio" className="text-white relative overflow-hidden group flex items-center">
-            <FolderHeart size={16} className="mr-1.5 text-electric-blue" />
+            <FolderHeart 
+              size={16} 
+              className="mr-1.5 text-electric-blue transition-all duration-300 group-hover:animate-pulse group-hover:scale-110 group-hover:rotate-6" 
+            />
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">Portfolio</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
           <Link to="/about" className="text-white relative overflow-hidden group flex items-center">
-            <Users size={16} className="mr-1.5 text-electric-blue" />
+            <Users 
+              size={16} 
+              className="mr-1.5 text-electric-blue transition-all duration-300 group-hover:animate-pulse group-hover:scale-110" 
+            />
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">About</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
           <Link to="/contact" className="text-white relative overflow-hidden group flex items-center">
-            <MessageSquare size={16} className="mr-1.5 text-electric-blue" />
+            <MessageSquare 
+              size={16} 
+              className="mr-1.5 text-electric-blue transition-all duration-300 group-hover:animate-pulse group-hover:scale-110" 
+            />
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">Contact</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
           <Button 
             onClick={handleCall}
-            className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md"
+            className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md hover:shadow-glow transition-all duration-300 group"
           >
-            <Phone className="mr-2" size={18} />
+            <Phone className="mr-2 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" size={18} />
             Let's Talk
           </Button>
         </div>
@@ -101,7 +116,10 @@ const Navbar = () => {
             className="text-white hover:text-electric-blue transition-colors"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? 
+              <X size={24} className="animate-fade-in" /> : 
+              <Menu size={24} className="transition-transform hover:rotate-12 hover:scale-110 duration-300" />
+            }
           </button>
         </div>
       </div>
@@ -115,7 +133,7 @@ const Navbar = () => {
               className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue flex items-center justify-center"
               onClick={() => setIsOpen(false)}
             >
-              <Home size={16} className="mr-2 text-electric-blue" />
+              <Home size={16} className="mr-2 text-electric-blue animate-pulse" />
               Home
             </Link>
             <Link 
@@ -123,7 +141,7 @@ const Navbar = () => {
               className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue flex items-center justify-center"
               onClick={() => setIsOpen(false)}
             >
-              <Briefcase size={16} className="mr-2 text-electric-blue" />
+              <Briefcase size={16} className="mr-2 text-electric-blue animate-pulse" />
               Services
             </Link>
             <Link 
@@ -131,7 +149,7 @@ const Navbar = () => {
               className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue flex items-center justify-center"
               onClick={() => setIsOpen(false)}
             >
-              <FolderHeart size={16} className="mr-2 text-electric-blue" />
+              <FolderHeart size={16} className="mr-2 text-electric-blue animate-pulse" />
               Portfolio
             </Link>
             <Link 
@@ -139,7 +157,7 @@ const Navbar = () => {
               className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue flex items-center justify-center"
               onClick={() => setIsOpen(false)}
             >
-              <Users size={16} className="mr-2 text-electric-blue" />
+              <Users size={16} className="mr-2 text-electric-blue animate-pulse" />
               About
             </Link>
             <Link 
@@ -147,14 +165,14 @@ const Navbar = () => {
               className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue flex items-center justify-center"
               onClick={() => setIsOpen(false)}
             >
-              <MessageSquare size={16} className="mr-2 text-electric-blue" />
+              <MessageSquare size={16} className="mr-2 text-electric-blue animate-pulse" />
               Contact
             </Link>
             <Button 
               onClick={handleCall} 
-              className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md flex items-center justify-center"
+              className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-poppins font-medium py-3 px-6 rounded-md flex items-center justify-center hover:shadow-glow transition-all duration-300"
             >
-              <Phone className="mr-2" size={18} />
+              <Phone className="mr-2 animate-pulse" size={18} />
               Let's Talk
             </Button>
           </div>
