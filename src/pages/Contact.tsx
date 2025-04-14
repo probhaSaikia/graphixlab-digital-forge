@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
@@ -6,7 +5,7 @@ import AdvancedContactForm from '@/components/contact/AdvancedContactForm';
 import BookingScheduler from '@/components/contact/BookingScheduler';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Calendar, MessageSquare, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Calendar, MessageSquare, Instagram, Facebook } from 'lucide-react';
 
 const Contact = () => {
   const fadeInUpVariants = {
@@ -146,6 +145,16 @@ const Contact = () => {
                     className="w-10 h-10 rounded-full bg-electric-blue/10 flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-white transition-colors"
                   >
                     <Instagram size={20} />
+                  </motion.a>
+                  <motion.a 
+                    whileHover={{ scale: 1.1, y: -5 }} 
+                    whileTap={{ scale: 0.95 }} 
+                    href="https://www.facebook.com/profile.php?id=61575063698366"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-electric-blue/10 flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-white transition-colors"
+                  >
+                    <Facebook size={20} />
                   </motion.a>
                 </div>
               </motion.div>
@@ -344,4 +353,5 @@ const Contact = () => {
       </motion.section>
     </Layout>;
 };
+
 export default Contact;

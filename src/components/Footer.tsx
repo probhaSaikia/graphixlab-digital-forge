@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import { Instagram, Facebook, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 
 const Footer = () => {
   return <footer className="bg-deep-black border-t border-electric-blue/20 pt-16 pb-8">
@@ -27,6 +27,14 @@ const Footer = () => {
                 className="text-gray-400 hover:text-electric-blue transition-colors transform hover:scale-110 duration-300"
               >
                 <Instagram size={20} />
+              </a>
+              <a 
+                href="https://www.facebook.com/profile.php?id=61575063698366" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-electric-blue transition-colors transform hover:scale-110 duration-300"
+              >
+                <Facebook size={20} />
               </a>
             </div>
           </div>
@@ -137,4 +145,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;
