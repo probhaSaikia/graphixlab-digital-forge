@@ -1,18 +1,9 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, GraduationCap, Book, Users, Globe, Mail, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 const Portfolio = () => {
   // Featured project (renamed from Harshi to Maharshi)
   const featuredProject = {
@@ -25,9 +16,7 @@ const Portfolio = () => {
     link: 'https://maharshiexcellenceacademy.com',
     featured: true
   };
-
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section - Enhanced with Electric Blue */}
       <section className="bg-black border-b border-electric-blue/20 py-20 md:py-28">
         <div className="container mx-auto px-4">
@@ -49,7 +38,9 @@ const Portfolio = () => {
             
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white neon-text">Project Portfolio</h1>
-              <p className="text-xl text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <p className="text-xl text-gray-300 mb-8 animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
                 Showcasing my educational website project with a focus on creativity and functionality.
               </p>
             </div>
@@ -107,11 +98,7 @@ const Portfolio = () => {
                 </Button>
               </div>
               <div className="bg-black flex items-center justify-center p-8">
-                <img 
-                  src={featuredProject.image} 
-                  alt={featuredProject.title} 
-                  className="rounded-lg max-h-[400px] object-cover shadow-lg border border-electric-blue/20"
-                />
+                
               </div>
             </div>
           </div>
@@ -128,8 +115,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Portfolio;
