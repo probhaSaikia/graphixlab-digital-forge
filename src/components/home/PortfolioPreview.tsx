@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
+
 const PortfolioPreview = () => {
   // Renamed from Harshi to Maharshi
   const featuredProject = {
@@ -11,8 +13,9 @@ const PortfolioPreview = () => {
     image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8',
     delay: 0.1,
     featured: true,
-    link: 'https://harshiexcellenceacademy.com'
+    link: 'https://maharshiexcellenceacademy.com'
   };
+  
   return <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -64,7 +67,30 @@ const PortfolioPreview = () => {
               </Button>
             </div>
             <div className="bg-black flex items-center justify-center p-8">
-              
+              <div className="w-full h-full min-h-[250px] md:min-h-[350px] relative rounded-md overflow-hidden shadow-lg border border-electric-blue/30">
+                <div className="absolute inset-0 bg-electric-blue/5 backdrop-blur-sm z-10 flex items-center justify-center">
+                  <div className="animate-pulse flex flex-col items-center">
+                    <div className="h-8 w-8 border-4 border-electric-blue border-t-transparent rounded-full animate-spin mb-2"></div>
+                    <p className="text-electric-blue text-sm">Loading Preview...</p>
+                  </div>
+                </div>
+                <iframe 
+                  src={featuredProject.link}
+                  className="w-full h-full absolute inset-0 z-0"
+                  title="Maharshi Excellence Academy Website Preview"
+                  loading="lazy"
+                  sandbox="allow-scripts allow-same-origin"
+                  onLoad={(e) => {
+                    // Remove loading overlay when iframe is loaded
+                    const target = e.target as HTMLIFrameElement;
+                    const parent = target.parentElement;
+                    if (parent) {
+                      const loadingOverlay = parent.querySelector('div.absolute');
+                      if (loadingOverlay) loadingOverlay.classList.add('hidden');
+                    }
+                  }}
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -77,4 +103,5 @@ const PortfolioPreview = () => {
       </div>
     </section>;
 };
+
 export default PortfolioPreview;
