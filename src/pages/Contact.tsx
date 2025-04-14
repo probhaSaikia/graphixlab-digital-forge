@@ -1,12 +1,13 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import AdvancedContactForm from '@/components/contact/AdvancedContactForm';
 import BookingScheduler from '@/components/contact/BookingScheduler';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Calendar, MessageSquare, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Calendar, MessageSquare, Instagram } from 'lucide-react';
+
 const Contact = () => {
   const fadeInUpVariants = {
     hidden: {
@@ -23,18 +24,18 @@ const Contact = () => {
       }
     })
   };
+  
   return <Layout>
       {/* WhatsApp Button */}
       <WhatsAppButton />
       
       {/* Hero Section */}
-      <motion.section initial={{
-      opacity: 0
-    }} animate={{
-      opacity: 1
-    }} transition={{
-      duration: 0.8
-    }} className="bg-black py-20 md:py-28 relative overflow-hidden">
+      <motion.section 
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1 }} 
+        transition={{ duration: 0.8 }} 
+        className="bg-black py-20 md:py-28 relative overflow-hidden"
+      >
         <div className="absolute inset-0 z-0">
           <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-electric-blue/5 filter blur-[100px] animate-pulse-glow"></div>
           <div className="absolute bottom-1/3 right-1/4 w-96 h-96 rounded-full bg-[#FF52FF]/5 filter blur-[100px] animate-pulse-glow" style={{
@@ -43,37 +44,26 @@ const Contact = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.5
-        }} className="max-w-3xl mx-auto text-center">
-            <motion.h1 initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.5,
-            delay: 0.2
-          }} className="text-4xl md:text-5xl font-bold mb-6 text-white">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5 }} 
+            className="max-w-3xl mx-auto text-center"
+          >
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.5, delay: 0.2 }} 
+              className="text-4xl md:text-5xl font-bold mb-6 text-white"
+            >
               Get In <span className="text-electric-blue text-glow">Touch</span> With Us
             </motion.h1>
-            <motion.p initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.5,
-            delay: 0.3
-          }} className="text-xl text-gray-300 mb-8">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.5, delay: 0.3 }} 
+              className="text-xl text-gray-300 mb-8"
+            >
               Ready to start your project? Let's create something amazing together.
             </motion.p>
           </motion.div>
@@ -129,8 +119,6 @@ const Contact = () => {
                 </div>
               </motion.div>
               
-              
-              
               <motion.div variants={fadeInUpVariants} custom={4} className="flex items-start group">
                 <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-electric-blue/10 flex items-center justify-center mr-4 group-hover:bg-electric-blue/20 transition-colors duration-300">
                   <Clock className="text-electric-blue group-hover:animate-bounce" size={24} />
@@ -149,37 +137,15 @@ const Contact = () => {
               <motion.div variants={fadeInUpVariants} custom={5} className="pt-8">
                 <h4 className="text-white font-medium mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
-                  <motion.a whileHover={{
-                  scale: 1.1,
-                  y: -5
-                }} whileTap={{
-                  scale: 0.95
-                }} href="#" className="w-10 h-10 rounded-full bg-electric-blue/10 flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-white transition-colors">
-                    <Facebook size={20} />
-                  </motion.a>
-                  <motion.a whileHover={{
-                  scale: 1.1,
-                  y: -5
-                }} whileTap={{
-                  scale: 0.95
-                }} href="#" className="w-10 h-10 rounded-full bg-electric-blue/10 flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-white transition-colors">
-                    <Twitter size={20} />
-                  </motion.a>
-                  <motion.a whileHover={{
-                  scale: 1.1,
-                  y: -5
-                }} whileTap={{
-                  scale: 0.95
-                }} href="#" className="w-10 h-10 rounded-full bg-electric-blue/10 flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-white transition-colors">
+                  <motion.a 
+                    whileHover={{ scale: 1.1, y: -5 }} 
+                    whileTap={{ scale: 0.95 }} 
+                    href="https://www.instagram.com/graphixlab.in?igsh=MWN4NGJiejBkMW9rZQ=="
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-electric-blue/10 flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-white transition-colors"
+                  >
                     <Instagram size={20} />
-                  </motion.a>
-                  <motion.a whileHover={{
-                  scale: 1.1,
-                  y: -5
-                }} whileTap={{
-                  scale: 0.95
-                }} href="#" className="w-10 h-10 rounded-full bg-electric-blue/10 flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-white transition-colors">
-                    <Linkedin size={20} />
                   </motion.a>
                 </div>
               </motion.div>
@@ -230,7 +196,7 @@ const Contact = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div initial={{
             opacity: 0,
             y: 20
@@ -279,36 +245,6 @@ const Contact = () => {
                 Chat with one of our representatives for immediate assistance during business hours (9:30 AM - 5:30 PM IST).
               </p>
               <Button className="btn-primary w-full bg-gradient-to-r from-electric-blue to-[#FF52FF]">Start Chat</Button>
-            </motion.div>
-            
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.5,
-            delay: 0.3
-          }} whileHover={{
-            y: -10,
-            transition: {
-              duration: 0.2
-            }
-          }} className="bg-black border border-electric-blue/20 rounded-xl p-8 text-center hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
-              <div className="mx-auto w-16 h-16 rounded-full bg-electric-blue/10 flex items-center justify-center mb-6 group">
-                <Mail className="text-electric-blue group-hover:animate-bounce" size={28} />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Newsletter</h3>
-              <p className="text-gray-400 mb-6">
-                Subscribe to our newsletter for the latest updates, insights, and special offers.
-              </p>
-              <div className="flex">
-                <Input placeholder="Your Email" className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white rounded-r-none" />
-                <Button className="bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white rounded-l-none">
-                  Subscribe
-                </Button>
-              </div>
             </motion.div>
           </div>
         </div>

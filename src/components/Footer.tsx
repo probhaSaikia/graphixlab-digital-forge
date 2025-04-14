@@ -13,7 +13,7 @@ const Footer = () => {
         }}>
             <Link to="/" className="inline-block mb-4 group">
               <span className="text-2xl font-poppins font-bold text-white group-hover:text-glow transition-all duration-300">
-                Graphi<span className="text-electric-blue group-hover:pink-text-glow">X</span>lab
+                Graphi<span className="text-neon-pink group-hover:pink-text-glow">X</span>lab
               </span>
             </Link>
             <p className="text-gray-400 mb-4">
