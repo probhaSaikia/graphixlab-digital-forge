@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
-
 const PortfolioPreview = () => {
   // Renamed from Harshi to Maharshi
   const featuredProject = {
@@ -15,13 +13,13 @@ const PortfolioPreview = () => {
     featured: true,
     link: 'https://harshiexcellenceacademy.com'
   };
-
-  return (
-    <section className="py-20 bg-black">
+  return <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 animate-fade-in">Featured Project</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-gray-400 max-w-2xl mx-auto animate-fade-in" style={{
+          animationDelay: '0.1s'
+        }}>
             Check out my educational website project that showcases creativity and expertise.
           </p>
         </div>
@@ -66,11 +64,7 @@ const PortfolioPreview = () => {
               </Button>
             </div>
             <div className="bg-black flex items-center justify-center p-8">
-              <img 
-                src={featuredProject.image} 
-                alt={featuredProject.title} 
-                className="rounded-lg max-h-[400px] object-cover shadow-lg border border-electric-blue/20"
-              />
+              
             </div>
           </div>
         </div>
@@ -81,8 +75,6 @@ const PortfolioPreview = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PortfolioPreview;
