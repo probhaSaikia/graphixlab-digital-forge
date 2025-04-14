@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Home, Briefcase, FolderHeart, Users, MessageSquare } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
 import { useToast } from '@/hooks/use-toast';
 
@@ -60,23 +60,28 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-white relative overflow-hidden group">
+          <Link to="/" className="text-white relative overflow-hidden group flex items-center">
+            <Home size={16} className="mr-1.5 text-electric-blue" />
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">Home</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
-          <Link to="/services" className="text-white relative overflow-hidden group">
+          <Link to="/services" className="text-white relative overflow-hidden group flex items-center">
+            <Briefcase size={16} className="mr-1.5 text-electric-blue" />
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">Services</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
-          <Link to="/portfolio" className="text-white relative overflow-hidden group">
+          <Link to="/portfolio" className="text-white relative overflow-hidden group flex items-center">
+            <FolderHeart size={16} className="mr-1.5 text-electric-blue" />
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">Portfolio</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
-          <Link to="/about" className="text-white relative overflow-hidden group">
+          <Link to="/about" className="text-white relative overflow-hidden group flex items-center">
+            <Users size={16} className="mr-1.5 text-electric-blue" />
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">About</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
-          <Link to="/contact" className="text-white relative overflow-hidden group">
+          <Link to="/contact" className="text-white relative overflow-hidden group flex items-center">
+            <MessageSquare size={16} className="mr-1.5 text-electric-blue" />
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">Contact</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
@@ -107,37 +112,42 @@ const Navbar = () => {
           <div className="flex flex-col space-y-4">
             <Link 
               to="/" 
-              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue"
+              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue flex items-center justify-center"
               onClick={() => setIsOpen(false)}
             >
+              <Home size={16} className="mr-2 text-electric-blue" />
               Home
             </Link>
             <Link 
               to="/services" 
-              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue"
+              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue flex items-center justify-center"
               onClick={() => setIsOpen(false)}
             >
+              <Briefcase size={16} className="mr-2 text-electric-blue" />
               Services
             </Link>
             <Link 
               to="/portfolio" 
-              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue"
+              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue flex items-center justify-center"
               onClick={() => setIsOpen(false)}
             >
+              <FolderHeart size={16} className="mr-2 text-electric-blue" />
               Portfolio
             </Link>
             <Link 
               to="/about" 
-              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue"
+              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue flex items-center justify-center"
               onClick={() => setIsOpen(false)}
             >
+              <Users size={16} className="mr-2 text-electric-blue" />
               About
             </Link>
             <Link 
               to="/contact" 
-              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue"
+              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue flex items-center justify-center"
               onClick={() => setIsOpen(false)}
             >
+              <MessageSquare size={16} className="mr-2 text-electric-blue" />
               Contact
             </Link>
             <Button 
