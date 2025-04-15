@@ -54,7 +54,7 @@ const Welcome = () => {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-4xl font-bold text-white mb-2"
             >
-              Welcome to <span className="text-electric-blue">Graphi</span><span className="text-neon-pink">X</span>lab
+              Welcome to <span className="text-white">Graphi</span><span className="text-neon-pink">X</span><span className="text-white">lab</span>
             </motion.h1>
             
             <motion.p
