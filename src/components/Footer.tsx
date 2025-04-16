@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Mail, Phone, WhatsApp } from 'lucide-react';
+import { Instagram, Facebook, Mail, Phone, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return <footer className="bg-deep-black border-t border-electric-blue/20 pt-16 pb-8">
@@ -41,7 +42,7 @@ const Footer = () => {
                 rel="noopener noreferrer" 
                 className="text-gray-400 hover:text-electric-blue transition-colors transform hover:scale-110 duration-300"
               >
-                <WhatsApp size={20} />
+                <MessageCircle size={20} />
               </a>
             </div>
           </div>
