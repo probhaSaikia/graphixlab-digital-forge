@@ -15,6 +15,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
+import { useIsMobile } from '@/hooks/use-mobile';
 import { Send, Loader2, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -34,6 +35,7 @@ const AdvancedContactForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const isMobile = useIsMobile();
   
   // Initialize form with react-hook-form
   const form = useForm<FormValues>({
@@ -68,18 +70,18 @@ const AdvancedContactForm = () => {
         form.reset();
         setIsSubmitted(false);
       }, 1000);
-    }, 1500);
+    }, 1000); // Reduced timeout for better UX
   };
 
-  // Animation variants for form elements
+  // Simplified animation variants for better performance
   const formVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 5 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.1,
-        duration: 0.5,
+        delay: isMobile ? 0 : i * 0.05, // reduced or eliminated delays on mobile
+        duration: 0.2,
         ease: "easeOut"
       }
     })
@@ -87,19 +89,19 @@ const AdvancedContactForm = () => {
 
   return (
     <motion.div 
-      initial={{ opacity: 0, scale: 0.95 }}
+      initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      className="bg-black/70 backdrop-blur-sm p-8 rounded-xl border border-electric-blue/20 shadow-lg hover:shadow-electric-blue/10 transition-all duration-500"
+      transition={{ duration: 0.3 }}
+      className="bg-black/70 backdrop-blur-sm p-5 md:p-8 rounded-xl border border-electric-blue/20 shadow-lg hover:shadow-electric-blue/10 transition-all duration-300"
     >
-      <h3 className="text-2xl font-semibold text-white mb-6 relative inline-block">
+      <h3 className="text-xl md:text-2xl font-semibold text-white mb-4 md:mb-6 relative inline-block">
         Send Us a Message
         <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF]"></span>
       </h3>
       
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 md:space-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             <motion.div 
               custom={0} 
               initial="hidden" 
@@ -151,7 +153,7 @@ const AdvancedContactForm = () => {
             </motion.div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             <motion.div 
               custom={2} 
               initial="hidden" 
@@ -218,7 +220,7 @@ const AdvancedContactForm = () => {
                   <FormControl>
                     <Textarea 
                       placeholder="Tell us about your project..." 
-                      className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white min-h-[120px]"
+                      className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white min-h-[100px] md:min-h-[120px]"
                       {...field}
                     />
                   </FormControl>
@@ -233,11 +235,11 @@ const AdvancedContactForm = () => {
             initial="hidden" 
             animate="visible" 
             variants={formVariants}
-            className="pt-2"
+            className="pt-1 md:pt-2"
           >
             <Button 
               type="submit" 
-              className="w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-semibold py-3 px-6 rounded-md hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1"
+              className="w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-semibold py-2 md:py-3 px-4 md:px-6 rounded-md hover:shadow-glow transition-all duration-300"
               disabled={isSubmitting || isSubmitted}
             >
               {isSubmitting ? (
