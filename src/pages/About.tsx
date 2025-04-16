@@ -104,7 +104,7 @@ const About = () => {
                     <Users className="text-electric-blue" size={24} />
                   </div>
                   <div>
-                    <p className="text-white font-semibold">50+</p>
+                    <p className="text-white font-semibold">20+</p>
                     <p className="text-gray-400 text-sm">Satisfied Clients</p>
                   </div>
                 </div>
