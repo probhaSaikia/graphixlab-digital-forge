@@ -21,7 +21,12 @@ const Welcome = () => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed inset-0 flex items-center justify-center z-[100] bg-deep-black"
+          className="fixed inset-0 flex items-center justify-center z-[100] bg-[#0A192F]"
+          style={{
+            backgroundImage: `url('/lovable-uploads/6aab4efc-ea86-4f29-8d39-e6450b396ef4.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
         >
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
@@ -30,11 +35,6 @@ const Welcome = () => {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <div className="relative overflow-hidden">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-electric-blue/20 blur-[100px]"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-neon-pink/20 blur-[80px]"></div>
-            </div>
-            
             <motion.div 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -61,7 +61,7 @@ const Welcome = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="text-gray-400"
+              className="text-gray-300"
             >
               Crafting digital experiences that convert
             </motion.p>
