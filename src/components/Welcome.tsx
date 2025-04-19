@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -21,12 +20,7 @@ const Welcome = () => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed inset-0 flex items-center justify-center z-[100] bg-[#0A192F]"
-          style={{
-            backgroundImage: `url('/lovable-uploads/6aab4efc-ea86-4f29-8d39-e6450b396ef4.png')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
+          className="fixed inset-0 flex items-center justify-center z-[100] bg-deep-black"
         >
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
