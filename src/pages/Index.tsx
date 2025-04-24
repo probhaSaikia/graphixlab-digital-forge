@@ -39,7 +39,7 @@ const Index = () => {
         </div>
         
         <HeroGeometric 
-          badge="GraphiXlab Studio"
+          badge="GraphiXlab Digital Forge"
           title1="Elevate Your Digital"
           title2="Presence With Style"
         />
