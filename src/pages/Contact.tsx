@@ -6,13 +6,23 @@ import BookingScheduler from '@/components/contact/BookingScheduler';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Calendar, MessageCircle, Instagram, Facebook, Twitter } from 'lucide-react';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Clock, 
+  Calendar, 
+  MessageCircle, 
+  Instagram, 
+  Facebook, 
+  Twitter 
+} from 'lucide-react';
 
 const Contact = () => {
   const isMobile = useIsMobile();
-  const phoneNumber = "7002642149";
+  const phoneNumbers = ["7002642149", "8011551863"];
   const message = "Hello! I'm interested in discussing a project with you.";
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappLink = `https://wa.me/${phoneNumbers[0]}?text=${encodeURIComponent(message)}`;
   const bookingFormLink = "https://forms.gle/dHWmQ9C26PjW6mH99";
   
   const fadeInUpVariants = {
@@ -105,20 +115,30 @@ const Contact = () => {
                 </div>
               </motion.div>
               
-              <motion.div variants={fadeInUpVariants} custom={2} className="flex items-start group">
-                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-lg bg-electric-blue/10 flex items-center justify-center mr-3 md:mr-4 group-hover:bg-electric-blue/20 transition-colors duration-300">
-                  <Phone className="text-electric-blue" size={isMobile ? 20 : 24} />
-                </div>
-                <div>
-                  <h4 className="text-white font-medium mb-1">Call Us</h4>
-                  <a href="tel:7002642149" className="text-gray-400 hover:text-electric-blue transition-colors">
-                    7002642149
-                  </a>
-                  <p className="text-gray-500 text-sm mt-1">
-                    Mon-Fri, 9am-5pm EST
-                  </p>
-                </div>
-              </motion.div>
+              
+<motion.div variants={fadeInUpVariants} custom={2} className="flex items-start group">
+  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-lg bg-electric-blue/10 flex items-center justify-center mr-3 md:mr-4 group-hover:bg-electric-blue/20 transition-colors duration-300">
+    <Phone className="text-electric-blue" size={isMobile ? 20 : 24} />
+  </div>
+  <div>
+    <h4 className="text-white font-medium mb-1">Call Us</h4>
+    <div className="space-y-1">
+      {phoneNumbers.map((number, index) => (
+        <a 
+          key={number} 
+          href={`tel:${number}`} 
+          className="block text-gray-400 hover:text-electric-blue transition-colors"
+        >
+          {number}
+        </a>
+      ))}
+    </div>
+    <p className="text-gray-500 text-sm mt-1">
+      Mon-Fri, 9am-5pm EST
+    </p>
+  </div>
+</motion.div>
+
               
               <motion.div variants={fadeInUpVariants} custom={4} className="flex items-start group">
                 <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-lg bg-electric-blue/10 flex items-center justify-center mr-3 md:mr-4 group-hover:bg-electric-blue/20 transition-colors duration-300">
@@ -234,6 +254,7 @@ const Contact = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            
             <motion.div initial={{
             opacity: 0,
             y: 10
