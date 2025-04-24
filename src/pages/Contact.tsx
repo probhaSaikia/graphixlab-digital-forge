@@ -10,6 +10,10 @@ import { Mail, Phone, MapPin, Clock, Calendar, MessageCircle, Instagram, Faceboo
 
 const Contact = () => {
   const isMobile = useIsMobile();
+  const phoneNumber = "7002642149";
+  const message = "Hello! I'm interested in discussing a project with you.";
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const bookingFormLink = "https://forms.gle/dHWmQ9C26PjW6mH99";
   
   const fadeInUpVariants = {
     hidden: {
@@ -252,7 +256,14 @@ const Contact = () => {
               <p className="text-gray-400 mb-4 md:mb-6">
                 Book a convenient time for a 30-minute consultation to discuss your project. Starting at ₹999.
               </p>
-              <Button className="w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-semibold py-2 md:py-3 px-4 md:px-6 rounded-md hover:shadow-glow transition-all duration-300">Book a Call</Button>
+              <a 
+                href={bookingFormLink}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white text-center font-semibold py-2 md:py-3 px-4 md:px-6 rounded-md hover:shadow-glow transition-all duration-300"
+              >
+                Book a Call
+              </a>
             </motion.div>
             
             <motion.div initial={{
@@ -277,7 +288,14 @@ const Contact = () => {
               <p className="text-gray-400 mb-4 md:mb-6">
                 Chat with one of our representatives for immediate assistance during business hours (9:30 AM - 5:30 PM IST).
               </p>
-              <Button className="w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-semibold py-2 md:py-3 px-4 md:px-6 rounded-md hover:shadow-glow transition-all duration-300">Start Chat</Button>
+              <a 
+                href={whatsappLink}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white text-center font-semibold py-2 md:py-3 px-4 md:px-6 rounded-md hover:shadow-glow transition-all duration-300"
+              >
+                Start Chat
+              </a>
             </motion.div>
           </div>
         </div>
