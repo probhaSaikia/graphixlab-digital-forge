@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
@@ -75,7 +74,7 @@ function ElegantShape({
 }
 
 function HeroGeometric({
-    badge = "GraphiXlab Digital Forge", // Updated badge text
+    badge = "GraphiXlab Digital Forge",
     title1 = "Elevate Your Digital",
     title2 = "Presence With Style",
 }: {
@@ -96,6 +95,8 @@ function HeroGeometric({
             },
         }),
     };
+
+    const badgeText = badge || "GraphiXlab Digital Forge";
 
     return (
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-dark-bg">
@@ -159,7 +160,7 @@ function HeroGeometric({
                     >
                         <Circle className="h-2 w-2 fill-neon-pink/80" />
                         <span className="text-sm text-white/60 tracking-wide">
-                            {badge}
+                            {badgeText}
                         </span>
                     </motion.div>
 

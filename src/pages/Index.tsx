@@ -38,6 +38,7 @@ const Index = () => {
           </Breadcrumb>
         </div>
         
+        {/* Explicitly setting the badge prop */}
         <HeroGeometric 
           badge="GraphiXlab Digital Forge"
           title1="Elevate Your Digital"
