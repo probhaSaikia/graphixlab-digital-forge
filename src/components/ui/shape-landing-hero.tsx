@@ -75,7 +75,7 @@ function ElegantShape({
 }
 
 function HeroGeometric({
-    badge = "GraphiXlab Studio",
+    badge = "GraphiXlab Digital Forge", // Updated badge text
     title1 = "Elevate Your Digital",
     title2 = "Presence With Style",
 }: {
