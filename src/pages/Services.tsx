@@ -341,6 +341,7 @@ const Services = () => {
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-white mb-6">What's Included</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* What's Included - Left Side */}
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">
                   <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
@@ -359,31 +360,29 @@ const Services = () => {
                   <span className="text-gray-300">Standard features (forms, gallery, blog)</span>
                 </li>
               </ul>
-            </div>
-          </div>
 
-          {/* Why Choose Us */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <ul className="space-y-4">
-                <li className="flex items-start space-x-3">
-                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                  <span className="text-gray-300">One-stop solution for design, domain, hosting & maintenance</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                  <span className="text-gray-300">Transparent pricing with no hidden fees</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                  <span className="text-gray-300">Quick delivery & high-quality work</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                  <span className="text-gray-300">Support via WhatsApp, call, or email</span>
-                </li>
-              </ul>
+              {/* Why Choose Us - Right Side */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start space-x-3">
+                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                    <span className="text-gray-300">One-stop solution for design, domain, hosting & maintenance</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                    <span className="text-gray-300">Transparent pricing with no hidden fees</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                    <span className="text-gray-300">Quick delivery & high-quality work</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                    <span className="text-gray-300">Support via WhatsApp, call, or email</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
