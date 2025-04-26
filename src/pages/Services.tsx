@@ -119,123 +119,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Web Development Benefits Section */}
-      <section className="py-16 bg-black border-t border-electric-blue/10">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white mb-8">Web Development Package Benefits</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {/* Domain Benefits */}
-            <Card className="bg-black border border-electric-blue/20">
-              <CardHeader>
-                <div className="flex items-center space-x-2">
-                  <Globe className="text-electric-blue" size={24} />
-                  <CardTitle className="text-white">Free Domain</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-2">
-                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                    <span className="text-gray-300">.in Domain – Absolutely FREE (if available)</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                    <span className="text-gray-300">.com Domain – Available at minimal additional cost</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Maintenance Benefits */}
-            <Card className="bg-black border border-electric-blue/20">
-              <CardHeader>
-                <div className="flex items-center space-x-2">
-                  <Server className="text-electric-blue" size={24} />
-                  <CardTitle className="text-white">Free Maintenance</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-2">
-                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                    <span className="text-gray-300">3 Months Free Maintenance & Updates</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                    <span className="text-gray-300">Bug fixes and minor content edits</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                    <span className="text-gray-300">Performance optimization</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <IndianRupee className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                    <span className="text-gray-300">After 3 months: Plans from ₹499/month</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Package Inclusions */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-white mb-6">What's Included</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <ul className="space-y-4">
-                <li className="flex items-start space-x-3">
-                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                  <span className="text-gray-300">Custom-designed, responsive website</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                  <span className="text-gray-300">Basic SEO setup for Google ranking</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                  <span className="text-gray-300">Fast & secure hosting support</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                  <span className="text-gray-300">Standard features (forms, gallery, blog)</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Why Choose Us */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <ul className="space-y-4">
-                <li className="flex items-start space-x-3">
-                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                  <span className="text-gray-300">One-stop solution for design, domain, hosting & maintenance</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                  <span className="text-gray-300">Transparent pricing with no hidden fees</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                  <span className="text-gray-300">Quick delivery & high-quality work</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
-                  <span className="text-gray-300">Support via WhatsApp, call, or email</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Button className="btn-primary text-lg px-8 py-6">
-              Get Started with Your Website
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Services Categories */}
       <section className="py-16 bg-black border-t border-electric-blue/10">
         <div className="container mx-auto px-4">
@@ -388,6 +271,125 @@ const Services = () => {
             <p className="text-gray-400 mb-4">Not sure which plan is right for you?</p>
             <Button className="btn-primary">
               Contact Us for a Custom Solution
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Web Development Package Benefits Section */}
+      <section className="py-16 bg-black border-t border-electric-blue/10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Web Development Package Benefits</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {/* Domain Benefits */}
+            <Card className="bg-black border border-electric-blue/20">
+              <CardHeader>
+                <div className="flex items-center space-x-2">
+                  <Globe className="text-electric-blue" size={24} />
+                  <CardTitle className="text-white">Free Domain</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-2">
+                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                    <span className="text-gray-300">.in Domain – Absolutely FREE (if available)</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                    <span className="text-gray-300">.com Domain – Available at minimal additional cost</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Maintenance Benefits */}
+            <Card className="bg-black border border-electric-blue/20">
+              <CardHeader>
+                <div className="flex items-center space-x-2">
+                  <Server className="text-electric-blue" size={24} />
+                  <CardTitle className="text-white">Free Maintenance</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-2">
+                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                    <span className="text-gray-300">3 Months Free Maintenance & Updates</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                    <span className="text-gray-300">Bug fixes and minor content edits</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                    <span className="text-gray-300">Performance optimization</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <IndianRupee className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                    <span className="text-gray-300">After 3 months: Plans from ₹499/month</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Package Inclusions */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-white mb-6">What's Included</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <ul className="space-y-4">
+                <li className="flex items-start space-x-3">
+                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                  <span className="text-gray-300">Custom-designed, responsive website</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                  <span className="text-gray-300">Basic SEO setup for Google ranking</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                  <span className="text-gray-300">Fast & secure hosting support</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                  <span className="text-gray-300">Standard features (forms, gallery, blog)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Why Choose Us */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <ul className="space-y-4">
+                <li className="flex items-start space-x-3">
+                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                  <span className="text-gray-300">One-stop solution for design, domain, hosting & maintenance</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                  <span className="text-gray-300">Transparent pricing with no hidden fees</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                  <span className="text-gray-300">Quick delivery & high-quality work</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Check className="text-electric-blue mt-1 flex-shrink-0" size={18} />
+                  <span className="text-gray-300">Support via WhatsApp, call, or email</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Button className="btn-primary text-lg px-8 py-6">
+              Get Started with Your Website
             </Button>
           </div>
         </div>
