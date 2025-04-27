@@ -8,7 +8,8 @@ import {
   PenTool, 
   LineChart, 
   Mail, 
-  Database, 
+  Database,
+  Users,
   ChevronRight 
 } from 'lucide-react';
 
@@ -66,16 +67,22 @@ const ServicesSection = () => {
       delay: 0.4
     },
     {
+      icon: <Users className="text-electric-blue" size={24} />,
+      title: 'Social Media Management',
+      description: 'Professional management of your social media presence across platforms.',
+      delay: 0.5
+    },
+    {
       icon: <Mail className="text-electric-blue" size={24} />,
       title: 'Email Campaigns',
       description: 'Engaging email marketing that nurtures leads and drives sales.',
-      delay: 0.5
+      delay: 0.6
     },
     {
       icon: <Database className="text-electric-blue" size={24} />,
       title: 'Web Hosting',
       description: 'Reliable hosting solutions with top-tier performance and security.',
-      delay: 0.6
+      delay: 0.7
     },
   ];
   

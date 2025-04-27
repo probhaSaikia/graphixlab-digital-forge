@@ -10,11 +10,12 @@ import {
   LineChart, 
   Mail, 
   Database, 
-  MonitorSmartphone, 
+  MonitorSmartphone,
   Image, 
   Server,
   IndianRupee,
-  Check 
+  Check,
+  Users 
 } from 'lucide-react';
 
 const Services = () => {
@@ -71,14 +72,14 @@ const Services = () => {
       description: 'Comprehensive digital marketing strategies to reach your target audience and drive conversions.',
     },
     {
+      icon: <Users className="text-electric-blue" size={24} />,
+      title: 'Social Media Management',
+      description: 'Boost your online presence with professional management of your social media accounts across Instagram, Facebook, LinkedIn, and more.',
+    },
+    {
       icon: <Mail className="text-electric-blue" size={24} />,
       title: 'Email Marketing',
       description: 'Effective email campaigns to nurture leads, engage customers, and drive sales.',
-    },
-    {
-      icon: <Image className="text-electric-blue" size={24} />,
-      title: 'Social Media Marketing',
-      description: 'Strategic social media campaigns to build brand awareness and engage with your audience.',
     },
     {
       icon: <LineChart className="text-electric-blue" size={24} />,
