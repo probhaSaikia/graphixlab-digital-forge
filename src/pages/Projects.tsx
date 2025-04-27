@@ -6,7 +6,7 @@ import { ExternalLink, GraduationCap, Book, Users, Globe, Mail, Smartphone } fro
 import { Link } from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 
-const Portfolio = () => {
+const Projects = () => {
   const featuredProject = {
     id: 1,
     title: 'Maharshi Excellence Academy',
@@ -16,6 +16,7 @@ const Portfolio = () => {
     link: 'https://maharshiexcellenceacademy.com',
     featured: true
   };
+  
   return (
     <Layout>
       {/* Hero Section - Enhanced with Electric Blue */}
@@ -32,17 +33,17 @@ const Portfolio = () => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage className="text-electric-blue">Portfolio</BreadcrumbPage>
+                  <BreadcrumbPage className="text-electric-blue">Projects</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
             
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white neon-text">Project Portfolio</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white neon-text">Our Projects</h1>
               <p className="text-xl text-gray-300 mb-8 animate-fade-in" style={{
               animationDelay: '0.2s'
             }}>
-                Showcasing my educational website project with a focus on creativity and functionality.
+                Showcasing our educational website project with a focus on creativity and functionality.
               </p>
             </div>
           </div>
@@ -103,7 +104,7 @@ const Portfolio = () => {
           <div className="mt-16 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Discuss Your Project?</h2>
             <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-              Let me help you bring your educational or business website vision to life.
+              Let us help you bring your educational or business website vision to life.
             </p>
             <Button asChild className="btn-primary bg-electric-blue hover:bg-electric-blue/90">
               <Link to="/contact">Get in Touch</Link>
@@ -115,4 +116,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;

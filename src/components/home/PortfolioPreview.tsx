@@ -14,7 +14,8 @@ const PortfolioPreview = () => {
     link: 'https://maharshiexcellenceacademy.com'
   };
   
-  return <section className="py-20 bg-black">
+  return (
+    <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 animate-fade-in">Featured Project</h2>
@@ -65,13 +66,17 @@ const PortfolioPreview = () => {
           </div>
         </div>
         
-        <div className="text-center mt-12">
-          <Button asChild className="btn-primary">
-            <Link to="/portfolio">View Project Details</Link>
+        <div className="text-center mt-12 flex flex-col md:flex-row gap-4 justify-center">
+          <Button asChild className="btn-primary bg-electric-blue hover:bg-electric-blue/90 text-white">
+            <Link to="/portfolio">View Portfolio</Link>
+          </Button>
+          <Button asChild className="btn-primary bg-electric-blue/80 hover:bg-electric-blue/90 text-white">
+            <Link to="/projects">Explore All Projects</Link>
           </Button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default PortfolioPreview;
