@@ -79,6 +79,7 @@ const Services = () => {
     },
     {
       icon: <Mail className="text-electric-blue" size={24} />,
+      title: 'Email Marketing',
       description: 'Effective email campaigns to nurture leads, engage customers, and drive sales.',
     },
     {
