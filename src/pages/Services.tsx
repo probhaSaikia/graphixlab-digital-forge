@@ -15,7 +15,8 @@ import {
   Server,
   IndianRupee,
   Check,
-  Users 
+  Users,
+  Bot 
 } from 'lucide-react';
 
 const Services = () => {
@@ -78,13 +79,17 @@ const Services = () => {
     },
     {
       icon: <Mail className="text-electric-blue" size={24} />,
-      title: 'Email Marketing',
       description: 'Effective email campaigns to nurture leads, engage customers, and drive sales.',
     },
     {
       icon: <LineChart className="text-electric-blue" size={24} />,
       title: 'Google Ads',
       description: 'Targeted advertising campaigns on Google to drive quality traffic to your website.',
+    },
+    {
+      icon: <Bot className="text-electric-blue" size={24} />,
+      title: 'AI Agents Services',
+      description: 'Custom AI agents and chatbots to automate customer service, lead generation, and business processes for enhanced efficiency and 24/7 support.',
     },
   ];
 
