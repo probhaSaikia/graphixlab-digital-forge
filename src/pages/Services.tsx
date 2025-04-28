@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -17,8 +18,8 @@ import {
   Check,
   Users,
   Bot,
-  WhatsApp,
-  AdCreation
+  MessageSquare,
+  BadgePercent
 } from 'lucide-react';
 
 const Services = () => {
@@ -85,12 +86,12 @@ const Services = () => {
       description: 'Effective email campaigns to nurture leads, engage customers, and drive sales.',
     },
     {
-      icon: <WhatsApp className="text-electric-blue" size={24} />,
+      icon: <MessageSquare className="text-electric-blue" size={24} />,
       title: 'WhatsApp Marketing',
       description: 'Engage customers directly through WhatsApp Business API with automated messaging, broadcasts, and personalized communication.',
     },
     {
-      icon: <AdCreation className="text-electric-blue" size={24} />,
+      icon: <BadgePercent className="text-electric-blue" size={24} />,
       title: 'Digital Advertising',
       description: 'Strategic paid advertising campaigns across Google, Meta, and other platforms to maximize ROI and customer acquisition.',
     },
