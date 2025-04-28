@@ -16,7 +16,9 @@ import {
   IndianRupee,
   Check,
   Users,
-  Bot 
+  Bot,
+  WhatsApp,
+  AdCreation
 } from 'lucide-react';
 
 const Services = () => {
@@ -81,6 +83,16 @@ const Services = () => {
       icon: <Mail className="text-electric-blue" size={24} />,
       title: 'Email Marketing',
       description: 'Effective email campaigns to nurture leads, engage customers, and drive sales.',
+    },
+    {
+      icon: <WhatsApp className="text-electric-blue" size={24} />,
+      title: 'WhatsApp Marketing',
+      description: 'Engage customers directly through WhatsApp Business API with automated messaging, broadcasts, and personalized communication.',
+    },
+    {
+      icon: <AdCreation className="text-electric-blue" size={24} />,
+      title: 'Digital Advertising',
+      description: 'Strategic paid advertising campaigns across Google, Meta, and other platforms to maximize ROI and customer acquisition.',
     },
     {
       icon: <LineChart className="text-electric-blue" size={24} />,
