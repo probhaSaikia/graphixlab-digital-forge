@@ -9,7 +9,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import useEmblaCarousel from 'embla-carousel-react';
-import { Autoplay } from 'embla-carousel-autoplay';
+// Fix: Import Autoplay as default export instead of named export
+import Autoplay from 'embla-carousel-autoplay';
 import { cn } from '@/lib/utils';
 
 interface CarouselSlide {
@@ -95,55 +96,54 @@ const ImageCarousel = () => {
             <CarouselContent>
               {slides.map((slide, index) => (
                 <CarouselItem key={index} className="md:basis-2/3 lg:basis-3/5">
-                  {({ isSelected }) => (
-                    <div className={cn(
-                      "relative overflow-hidden rounded-xl transition-all duration-500 transform",
-                      isSelected ? "scale-100 opacity-100" : "scale-90 opacity-70"
-                    )}>
-                      <div className="aspect-[16/9] relative overflow-hidden rounded-xl group">
-                        <motion.div
-                          initial={{ scale: 1.1 }}
-                          animate={{ scale: isSelected ? 1 : 1.05 }}
-                          transition={{ duration: 0.8 }}
-                          className="absolute inset-0 bg-black"
-                        >
-                          <img
-                            src={slide.image}
-                            alt={slide.tagline}
-                            className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                        </motion.div>
-                        
-                        <div className="absolute bottom-0 left-0 w-full p-6 text-white">
-                          <AnimatePresence mode="wait">
-                            {isSelected && (
-                              <>
-                                <motion.h3
-                                  className="text-2xl font-bold mb-2 neon-text"
-                                  initial={{ opacity: 0, y: 20 }}
-                                  animate={{ opacity: 1, y: 0 }}
-                                  exit={{ opacity: 0, y: -10 }}
-                                  transition={{ duration: 0.4 }}
-                                >
-                                  {slide.tagline}
-                                </motion.h3>
-                                <motion.p
-                                  className="text-sm md:text-base text-gray-200"
-                                  initial={{ opacity: 0, y: 20 }}
-                                  animate={{ opacity: 1, y: 0 }}
-                                  exit={{ opacity: 0, y: -10 }}
-                                  transition={{ duration: 0.4, delay: 0.1 }}
-                                >
-                                  {slide.description}
-                                </motion.p>
-                              </>
-                            )}
-                          </AnimatePresence>
-                        </div>
+                  {/* Fix: Convert render prop pattern to properly use ReactNode */}
+                  <div className={cn(
+                    "relative overflow-hidden rounded-xl transition-all duration-500 transform",
+                    activeSlide === index ? "scale-100 opacity-100" : "scale-90 opacity-70"
+                  )}>
+                    <div className="aspect-[16/9] relative overflow-hidden rounded-xl group">
+                      <motion.div
+                        initial={{ scale: 1.1 }}
+                        animate={{ scale: activeSlide === index ? 1 : 1.05 }}
+                        transition={{ duration: 0.8 }}
+                        className="absolute inset-0 bg-black"
+                      >
+                        <img
+                          src={slide.image}
+                          alt={slide.tagline}
+                          className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                      </motion.div>
+                      
+                      <div className="absolute bottom-0 left-0 w-full p-6 text-white">
+                        <AnimatePresence mode="wait">
+                          {activeSlide === index && (
+                            <>
+                              <motion.h3
+                                className="text-2xl font-bold mb-2 neon-text"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.4 }}
+                              >
+                                {slide.tagline}
+                              </motion.h3>
+                              <motion.p
+                                className="text-sm md:text-base text-gray-200"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.4, delay: 0.1 }}
+                              >
+                                {slide.description}
+                              </motion.p>
+                            </>
+                          )}
+                        </AnimatePresence>
                       </div>
                     </div>
-                  )}
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
