@@ -9,9 +9,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import useEmblaCarousel from 'embla-carousel-react';
-// Fix: Import Autoplay as default export instead of named export
-import Autoplay from 'embla-carousel-autoplay';
+// Fix: Import Autoplay correctly as default import
+import AutoplayModule from 'embla-carousel-autoplay';
 import { cn } from '@/lib/utils';
+
+// Use the imported autoplay module correctly
+const Autoplay = AutoplayModule;
 
 interface CarouselSlide {
   image: string;
@@ -28,23 +31,23 @@ const ImageCarousel = () => {
   const slides: CarouselSlide[] = [
     {
       image: "/lovable-uploads/e38798ec-862c-40b4-a391-0c252302dbb2.png",
-      tagline: "Build Together",
-      description: "Collaborate with our team to create innovative digital solutions"
+      tagline: "Collaborative Innovation",
+      description: "Partner with our experts to create cutting-edge digital experiences"
     },
     {
       image: "/lovable-uploads/eb4f8430-eab5-4fce-8166-fa5c6338973b.png",
-      tagline: "Code Excellence",
-      description: "Expert development across multiple languages and frameworks"
+      tagline: "Technical Excellence",
+      description: "Precise development with modern frameworks and clean architectures"
     },
     {
       image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png",
-      tagline: "Digital Craftsmanship",
-      description: "Creating beautiful, functional websites with precision and care"
+      tagline: "Creative Craftsmanship",
+      description: "Where art meets technology in perfect digital harmony"
     },
     {
       image: "/lovable-uploads/d38ac88d-d681-4b4a-84c4-15db6ce0fbff.png",
-      tagline: "Modern Solutions",
-      description: "Implementing cutting-edge technologies for your digital needs"
+      tagline: "Future-Ready Solutions",
+      description: "Building tomorrow's technology with today's innovation"
     }
   ];
 
@@ -96,7 +99,6 @@ const ImageCarousel = () => {
             <CarouselContent>
               {slides.map((slide, index) => (
                 <CarouselItem key={index} className="md:basis-2/3 lg:basis-3/5">
-                  {/* Fix: Convert render prop pattern to properly use ReactNode */}
                   <div className={cn(
                     "relative overflow-hidden rounded-xl transition-all duration-500 transform",
                     activeSlide === index ? "scale-100 opacity-100" : "scale-90 opacity-70"
@@ -121,7 +123,7 @@ const ImageCarousel = () => {
                           {activeSlide === index && (
                             <>
                               <motion.h3
-                                className="text-2xl font-bold mb-2 neon-text"
+                                className="text-2xl md:text-3xl font-bold mb-2 neon-text"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
