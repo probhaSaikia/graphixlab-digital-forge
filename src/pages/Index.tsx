@@ -5,6 +5,7 @@ import { HeroGeometric } from '@/components/ui/shape-landing-hero';
 import ServicesSection from '@/components/home/ServicesSection';
 import WhyChooseUsSection from '@/components/home/WhyChooseUsSection';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
+import ImageCarousel from '@/components/home/ImageCarousel';
 import ContactSection from '@/components/home/ContactSection';
 import {
   Breadcrumb,
@@ -78,6 +79,10 @@ const Index = () => {
         </div>
         
         <PortfolioPreview />
+        
+        {/* Adding the Image Carousel component after the PortfolioPreview */}
+        <ImageCarousel />
+        
         <ContactSection />
       </div>
     </Layout>
