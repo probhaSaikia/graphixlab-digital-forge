@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { motion } from 'framer-motion';
@@ -33,7 +32,7 @@ const BlogPost = () => {
         <h2>Accessibility as a Priority</h2>
         <p>Accessibility is no longer an afterthought but a fundamental aspect of web design. Designers are embracing inclusive design principles to ensure that websites are usable by people with diverse abilities and needs. This includes considerations for color contrast, keyboard navigation, screen reader compatibility, and much more.</p>
       `,
-      image: "/lovable-uploads/e38798ec-862c-40b4-a391-0c252302dbb2.png",
+      image: "/lovable-uploads/b40f9962-b9c1-463d-89c7-08e0b8afd4ba.png", // Updated to design-focused image
       date: "May 1, 2025",
       author: "Alex Chen",
       readTime: "5 min read",
@@ -42,12 +41,12 @@ const BlogPost = () => {
         {
           id: 2,
           title: "Building Accessible React Applications",
-          image: "/lovable-uploads/eb4f8430-eab5-4fce-8166-fa5c6338973b.png"
+          image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png" // Updated to development image
         },
         {
           id: 3,
           title: "The Impact of AI in Modern Web Development",
-          image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png"
+          image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png" // Keeping this AI-related image
         }
       ]
     },
@@ -75,7 +74,7 @@ const BlogPost = () => {
         <h2>The Role of Components Libraries</h2>
         <p>Component libraries like Material-UI, Chakra UI, or Reakit can help streamline the process of building accessible applications by providing pre-built components that already implement many accessibility best practices.</p>
       `,
-      image: "/lovable-uploads/eb4f8430-eab5-4fce-8166-fa5c6338973b.png",
+      image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png", // Updated to development image
       date: "April 28, 2025",
       author: "Jamie Wilson",
       readTime: "8 min read",
@@ -84,12 +83,12 @@ const BlogPost = () => {
         {
           id: 1,
           title: "The Evolution of Web Design in 2025",
-          image: "/lovable-uploads/e38798ec-862c-40b4-a391-0c252302dbb2.png"
+          image: "/lovable-uploads/b40f9962-b9c1-463d-89c7-08e0b8afd4ba.png" // Updated to design-focused image
         },
         {
           id: 4,
           title: "Optimizing Performance in React Applications",
-          image: "/lovable-uploads/d38ac88d-d681-4b4a-84c4-15db6ce0fbff.png"
+          image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png" // Updated to development image
         }
       ]
     },
@@ -97,7 +96,7 @@ const BlogPost = () => {
       id: 3,
       title: "The Impact of AI in Modern Web Development",
       content: `<p>AI is transforming web development in profound ways...</p>`,
-      image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png",
+      image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png", // Keeping this AI-related image
       date: "April 22, 2025",
       author: "Sam Taylor",
       readTime: "6 min read",
@@ -106,12 +105,12 @@ const BlogPost = () => {
         {
           id: 1,
           title: "The Evolution of Web Design in 2025",
-          image: "/lovable-uploads/e38798ec-862c-40b4-a391-0c252302dbb2.png"
+          image: "/lovable-uploads/b40f9962-b9c1-463d-89c7-08e0b8afd4ba.png" // Updated to design-focused image
         },
         {
           id: 4,
           title: "Optimizing Performance in React Applications",
-          image: "/lovable-uploads/d38ac88d-d681-4b4a-84c4-15db6ce0fbff.png"
+          image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png" // Updated to development image
         }
       ]
     },
@@ -119,7 +118,7 @@ const BlogPost = () => {
       id: 4,
       title: "Optimizing Performance in React Applications",
       content: `<p>Performance optimization is crucial for React applications...</p>`,
-      image: "/lovable-uploads/d38ac88d-d681-4b4a-84c4-15db6ce0fbff.png",
+      image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png", // Updated to development image
       date: "April 15, 2025",
       author: "Morgan Lee",
       readTime: "7 min read",
@@ -128,12 +127,12 @@ const BlogPost = () => {
         {
           id: 2,
           title: "Building Accessible React Applications",
-          image: "/lovable-uploads/eb4f8430-eab5-4fce-8166-fa5c6338973b.png"
+          image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png" // Updated to development image
         },
         {
           id: 3,
           title: "The Impact of AI in Modern Web Development",
-          image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png"
+          image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png" // Keeping this AI-related image
         }
       ]
     },
@@ -173,7 +172,7 @@ const BlogPost = () => {
         
         <p>Sources: Industry research and expert insights from oramadigitaldesign.com, innovation.fortlewis.edu, searlesgraphics.com, sociallyin.com, and wordstream.com.</p>
       `,
-      image: "/lovable-uploads/e38798ec-862c-40b4-a391-0c252302dbb2.png",
+      image: "/lovable-uploads/1e56e3ab-ca17-4e3a-96cb-d62c665012a8.png", // Updated to business-related image
       date: "May 1, 2025",
       author: "Orama Digital",
       readTime: "10 min read",
@@ -182,12 +181,12 @@ const BlogPost = () => {
         {
           id: 1,
           title: "The Evolution of Web Design in 2025",
-          image: "/lovable-uploads/e38798ec-862c-40b4-a391-0c252302dbb2.png"
+          image: "/lovable-uploads/b40f9962-b9c1-463d-89c7-08e0b8afd4ba.png" // Updated to design-focused image
         },
         {
           id: 3,
           title: "The Impact of AI in Modern Web Development",
-          image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png"
+          image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png" // Keeping this AI-related image
         }
       ]
     }

@@ -13,7 +13,7 @@ const Blog = () => {
       id: 5,
       title: "Grow Your Small Business Online: Digital Services Guide",
       excerpt: "Discover how web development, SEO, digital marketing, and social media can transform your small business's online presence and drive growth.",
-      image: "/lovable-uploads/e38798ec-862c-40b4-a391-0c252302dbb2.png",
+      image: "/lovable-uploads/1e56e3ab-ca17-4e3a-96cb-d62c665012a8.png", // Updated to business-related image
       date: "May 1, 2025",
       author: "Orama Digital",
       readTime: "10 min read",
@@ -23,7 +23,7 @@ const Blog = () => {
       id: 1,
       title: "The Evolution of Web Design in 2025",
       excerpt: "Discover the latest trends in web design and how they're shaping the digital landscape in 2025.",
-      image: "/lovable-uploads/e38798ec-862c-40b4-a391-0c252302dbb2.png",
+      image: "/lovable-uploads/b40f9962-b9c1-463d-89c7-08e0b8afd4ba.png", // Updated to design-focused image
       date: "May 1, 2025",
       author: "Alex Chen",
       readTime: "5 min read",
@@ -33,7 +33,7 @@ const Blog = () => {
       id: 2,
       title: "Building Accessible React Applications",
       excerpt: "A comprehensive guide to creating inclusive and accessible React applications for all users.",
-      image: "/lovable-uploads/eb4f8430-eab5-4fce-8166-fa5c6338973b.png",
+      image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png", // Updated to development image
       date: "April 28, 2025",
       author: "Jamie Wilson",
       readTime: "8 min read",
@@ -43,7 +43,7 @@ const Blog = () => {
       id: 3,
       title: "The Impact of AI in Modern Web Development",
       excerpt: "Exploring how artificial intelligence is revolutionizing the way we build and interact with websites.",
-      image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png",
+      image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png", // Keeping this AI-related image
       date: "April 22, 2025",
       author: "Sam Taylor",
       readTime: "6 min read",
@@ -53,7 +53,7 @@ const Blog = () => {
       id: 4, 
       title: "Optimizing Performance in React Applications",
       excerpt: "Learn the best practices for building high-performance React applications that load quickly and run smoothly.",
-      image: "/lovable-uploads/d38ac88d-d681-4b4a-84c4-15db6ce0fbff.png",
+      image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png", // Updated to development image
       date: "April 15, 2025",
       author: "Morgan Lee",
       readTime: "7 min read",
