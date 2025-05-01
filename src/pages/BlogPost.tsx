@@ -34,7 +34,7 @@ const BlogPost = () => {
         <p>Accessibility is no longer an afterthought but a fundamental aspect of web design. Designers are embracing inclusive design principles to ensure that websites are usable by people with diverse abilities and needs. This includes considerations for color contrast, keyboard navigation, screen reader compatibility, and much more.</p>
       `,
       date: "May 1, 2025",
-      author: "Alex Chen",
+      author: "Probhakar Saikia",
       readTime: "5 min read",
       categories: ["Design", "Trends"],
       relatedPosts: [
@@ -73,7 +73,7 @@ const BlogPost = () => {
         <p>Component libraries like Material-UI, Chakra UI, or Reakit can help streamline the process of building accessible applications by providing pre-built components that already implement many accessibility best practices.</p>
       `,
       date: "April 28, 2025",
-      author: "Jamie Wilson",
+      author: "Probhakar Saikia",
       readTime: "8 min read",
       categories: ["Development", "Accessibility"],
       relatedPosts: [
@@ -111,7 +111,7 @@ const BlogPost = () => {
       title: "Optimizing Performance in React Applications",
       content: `<p>Performance optimization is crucial for React applications...</p>`,
       date: "April 15, 2025",
-      author: "Morgan Lee",
+      author: "Probhakar Saikia",
       readTime: "7 min read",
       categories: ["Development", "Performance"],
       relatedPosts: [
@@ -162,7 +162,7 @@ const BlogPost = () => {
         <p>Sources: Industry research and expert insights from oramadigitaldesign.com, innovation.fortlewis.edu, searlesgraphics.com, sociallyin.com, and wordstream.com.</p>
       `,
       date: "May 1, 2025",
-      author: "Orama Digital",
+      author: "Probhakar Saikia",
       readTime: "10 min read",
       categories: ["Small Business", "Digital Marketing"],
       relatedPosts: [
