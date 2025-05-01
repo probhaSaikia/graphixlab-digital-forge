@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { motion } from 'framer-motion';
@@ -32,7 +33,6 @@ const BlogPost = () => {
         <h2>Accessibility as a Priority</h2>
         <p>Accessibility is no longer an afterthought but a fundamental aspect of web design. Designers are embracing inclusive design principles to ensure that websites are usable by people with diverse abilities and needs. This includes considerations for color contrast, keyboard navigation, screen reader compatibility, and much more.</p>
       `,
-      image: "/lovable-uploads/b40f9962-b9c1-463d-89c7-08e0b8afd4ba.png", // Updated to design-focused image
       date: "May 1, 2025",
       author: "Alex Chen",
       readTime: "5 min read",
@@ -40,13 +40,11 @@ const BlogPost = () => {
       relatedPosts: [
         {
           id: 2,
-          title: "Building Accessible React Applications",
-          image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png" // Updated to development image
+          title: "Building Accessible React Applications"
         },
         {
           id: 3,
-          title: "The Impact of AI in Modern Web Development",
-          image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png" // Keeping this AI-related image
+          title: "The Impact of AI in Modern Web Development"
         }
       ]
     },
@@ -74,7 +72,6 @@ const BlogPost = () => {
         <h2>The Role of Components Libraries</h2>
         <p>Component libraries like Material-UI, Chakra UI, or Reakit can help streamline the process of building accessible applications by providing pre-built components that already implement many accessibility best practices.</p>
       `,
-      image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png", // Updated to development image
       date: "April 28, 2025",
       author: "Jamie Wilson",
       readTime: "8 min read",
@@ -82,13 +79,11 @@ const BlogPost = () => {
       relatedPosts: [
         {
           id: 1,
-          title: "The Evolution of Web Design in 2025",
-          image: "/lovable-uploads/b40f9962-b9c1-463d-89c7-08e0b8afd4ba.png" // Updated to design-focused image
+          title: "The Evolution of Web Design in 2025"
         },
         {
           id: 4,
-          title: "Optimizing Performance in React Applications",
-          image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png" // Updated to development image
+          title: "Optimizing Performance in React Applications"
         }
       ]
     },
@@ -96,7 +91,6 @@ const BlogPost = () => {
       id: 3,
       title: "The Impact of AI in Modern Web Development",
       content: `<p>AI is transforming web development in profound ways...</p>`,
-      image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png", // Keeping this AI-related image
       date: "April 22, 2025",
       author: "Sam Taylor",
       readTime: "6 min read",
@@ -104,13 +98,11 @@ const BlogPost = () => {
       relatedPosts: [
         {
           id: 1,
-          title: "The Evolution of Web Design in 2025",
-          image: "/lovable-uploads/b40f9962-b9c1-463d-89c7-08e0b8afd4ba.png" // Updated to design-focused image
+          title: "The Evolution of Web Design in 2025"
         },
         {
           id: 4,
-          title: "Optimizing Performance in React Applications",
-          image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png" // Updated to development image
+          title: "Optimizing Performance in React Applications"
         }
       ]
     },
@@ -118,7 +110,6 @@ const BlogPost = () => {
       id: 4,
       title: "Optimizing Performance in React Applications",
       content: `<p>Performance optimization is crucial for React applications...</p>`,
-      image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png", // Updated to development image
       date: "April 15, 2025",
       author: "Morgan Lee",
       readTime: "7 min read",
@@ -126,13 +117,11 @@ const BlogPost = () => {
       relatedPosts: [
         {
           id: 2,
-          title: "Building Accessible React Applications",
-          image: "/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png" // Updated to development image
+          title: "Building Accessible React Applications"
         },
         {
           id: 3,
-          title: "The Impact of AI in Modern Web Development",
-          image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png" // Keeping this AI-related image
+          title: "The Impact of AI in Modern Web Development"
         }
       ]
     },
@@ -172,7 +161,6 @@ const BlogPost = () => {
         
         <p>Sources: Industry research and expert insights from oramadigitaldesign.com, innovation.fortlewis.edu, searlesgraphics.com, sociallyin.com, and wordstream.com.</p>
       `,
-      image: "/lovable-uploads/1e56e3ab-ca17-4e3a-96cb-d62c665012a8.png", // Updated to business-related image
       date: "May 1, 2025",
       author: "Orama Digital",
       readTime: "10 min read",
@@ -180,13 +168,11 @@ const BlogPost = () => {
       relatedPosts: [
         {
           id: 1,
-          title: "The Evolution of Web Design in 2025",
-          image: "/lovable-uploads/b40f9962-b9c1-463d-89c7-08e0b8afd4ba.png" // Updated to design-focused image
+          title: "The Evolution of Web Design in 2025"
         },
         {
           id: 3,
-          title: "The Impact of AI in Modern Web Development",
-          image: "/lovable-uploads/d0359efa-bc3e-4d0a-a1ad-efa075324d9b.png" // Keeping this AI-related image
+          title: "The Impact of AI in Modern Web Development"
         }
       ]
     }
@@ -243,19 +229,6 @@ const BlogPost = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="rounded-lg overflow-hidden mb-10 neon-border"
-            >
-              <img 
-                src={post.image} 
-                alt={post.title} 
-                className="w-full h-auto object-cover"
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="prose prose-lg md:prose-xl prose-invert max-w-none"
               dangerouslySetInnerHTML={{ __html: post.content }}
@@ -273,20 +246,10 @@ const BlogPost = () => {
                     transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                   >
                     <Link to={`/blog/${relatedPost.id}`} className="group">
-                      <div className="bg-navy/30 rounded-lg overflow-hidden border border-electric-blue/20 hover:border-electric-blue/60 transition-colors duration-300">
-                        <div className="relative h-40 overflow-hidden">
-                          <img 
-                            src={relatedPost.image} 
-                            alt={relatedPost.title} 
-                            className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        </div>
-                        <div className="p-4">
-                          <h3 className="text-lg font-semibold text-white group-hover:text-electric-blue transition-colors">
-                            {relatedPost.title}
-                          </h3>
-                        </div>
+                      <div className="bg-navy/30 rounded-lg overflow-hidden border border-electric-blue/20 hover:border-electric-blue/60 transition-colors duration-300 p-4">
+                        <h3 className="text-lg font-semibold text-white group-hover:text-electric-blue transition-colors">
+                          {relatedPost.title}
+                        </h3>
                       </div>
                     </Link>
                   </motion.div>
