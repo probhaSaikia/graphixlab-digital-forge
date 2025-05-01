@@ -10,6 +10,16 @@ import { Calendar, Clock, User } from 'lucide-react';
 const Blog = () => {
   const blogPosts = [
     {
+      id: 5,
+      title: "Grow Your Small Business Online: Digital Services Guide",
+      excerpt: "Discover how web development, SEO, digital marketing, and social media can transform your small business's online presence and drive growth.",
+      image: "/lovable-uploads/e38798ec-862c-40b4-a391-0c252302dbb2.png",
+      date: "May 1, 2025",
+      author: "Orama Digital",
+      readTime: "10 min read",
+      categories: ["Small Business", "Digital Marketing"]
+    },
+    {
       id: 1,
       title: "The Evolution of Web Design in 2025",
       excerpt: "Discover the latest trends in web design and how they're shaping the digital landscape in 2025.",
