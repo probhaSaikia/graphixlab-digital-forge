@@ -94,19 +94,19 @@ const ImageCarousel = () => {
             plugins={[
               Autoplay({ delay: 5000, stopOnInteraction: false }),
             ]}
-            className="w-full max-w-5xl mx-auto"
+            className="w-full max-w-6xl mx-auto" // Increased max-width from 5xl to 6xl
           >
             <CarouselContent>
               {slides.map((slide, index) => (
-                <CarouselItem key={index} className="md:basis-2/3 lg:basis-3/5">
+                <CarouselItem key={index} className="md:basis-3/4 lg:basis-3/4"> {/* Increased from 2/3 and 3/5 to 3/4 */}
                   <div className={cn(
                     "relative overflow-hidden rounded-xl transition-all duration-500 transform",
-                    activeSlide === index ? "scale-100 opacity-100" : "scale-90 opacity-70"
+                    activeSlide === index ? "scale-100 opacity-100" : "scale-95 opacity-80" // Changed scale and opacity for better visibility
                   )}>
                     <div className="aspect-[16/9] relative overflow-hidden rounded-xl group">
                       <motion.div
                         initial={{ scale: 1.1 }}
-                        animate={{ scale: activeSlide === index ? 1 : 1.05 }}
+                        animate={{ scale: 1 }} // Always scale to 1 for consistent size
                         transition={{ duration: 0.8 }}
                         className="absolute inset-0 bg-black"
                       >
@@ -118,31 +118,39 @@ const ImageCarousel = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                       </motion.div>
                       
+                      {/* Tagline overlay - Now always visible regardless of active state */}
                       <div className="absolute bottom-0 left-0 w-full p-6 text-white">
-                        <AnimatePresence mode="wait">
-                          {activeSlide === index && (
-                            <>
-                              <motion.h3
-                                className="text-2xl md:text-3xl font-bold mb-2 neon-text"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -10 }}
-                                transition={{ duration: 0.4 }}
-                              >
-                                {slide.tagline}
-                              </motion.h3>
-                              <motion.p
-                                className="text-sm md:text-base text-gray-200"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -10 }}
-                                transition={{ duration: 0.4, delay: 0.1 }}
-                              >
-                                {slide.description}
-                              </motion.p>
-                            </>
-                          )}
-                        </AnimatePresence>
+                        <motion.h3
+                          className="text-2xl md:text-3xl font-bold mb-2 neon-text"
+                          initial={{ opacity: 0.8 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.4 }}
+                        >
+                          {slide.tagline}
+                        </motion.h3>
+                        <motion.p
+                          className="text-sm md:text-base text-gray-200"
+                          initial={{ opacity: 0.8 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.4 }}
+                        >
+                          {slide.description}
+                        </motion.p>
+                      </div>
+                      
+                      {/* Badge for better highlight */}
+                      <div className="absolute top-4 right-4">
+                        <motion.div 
+                          className="px-3 py-1 rounded-full bg-electric-blue/80 text-white text-xs font-medium"
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ 
+                            opacity: activeSlide === index ? 1 : 0.6,
+                            scale: activeSlide === index ? 1 : 0.9
+                          }}
+                          transition={{ duration: 0.4 }}
+                        >
+                          Featured
+                        </motion.div>
                       </div>
                     </div>
                   </div>
