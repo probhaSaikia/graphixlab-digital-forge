@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Phone, Home, Briefcase, FolderHeart, Users, MessageSquare } from 'lucide-react';
+import { Menu, X, Phone, Home, Briefcase, FolderHeart, Users, MessageSquare, BookOpen } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
 import { useToast } from '@/hooks/use-toast';
 
@@ -84,6 +84,14 @@ const Navbar = () => {
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">Portfolio</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
+          <Link to="/blog" className="text-white relative overflow-hidden group flex items-center">
+            <BookOpen 
+              size={16} 
+              className="mr-1.5 text-electric-blue transition-all duration-300 group-hover:animate-pulse group-hover:scale-110" 
+            />
+            <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300">Blog</span>
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-[#FF52FF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+          </Link>
           <Link to="/about" className="text-white relative overflow-hidden group flex items-center">
             <Users 
               size={16} 
@@ -151,6 +159,14 @@ const Navbar = () => {
             >
               <FolderHeart size={16} className="mr-2 text-electric-blue animate-pulse" />
               Portfolio
+            </Link>
+            <Link 
+              to="/blog" 
+              className="text-white hover:text-electric-blue transition-colors py-2 text-center border-l-2 border-r-2 border-transparent hover:border-electric-blue flex items-center justify-center"
+              onClick={() => setIsOpen(false)}
+            >
+              <BookOpen size={16} className="mr-2 text-electric-blue animate-pulse" />
+              Blog
             </Link>
             <Link 
               to="/about" 
