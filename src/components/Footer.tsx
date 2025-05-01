@@ -142,8 +142,8 @@ const Footer = () => {
             <ul className="space-y-3 md:space-y-4">
               <li className="flex items-center group hover-glow p-2 rounded-lg transition-all duration-300 hover:bg-electric-blue/5">
                 <Phone size={isMobile ? 18 : 20} className="text-electric-blue mr-2 md:mr-3 flex-shrink-0 group-hover:animate-pulse" />
-                <a href="tel:7002642149" className="text-gray-400 group-hover:text-electric-blue transition-colors">
-                  7002642149
+                <a href="tel:7002642149, 8011551863" className="text-gray-400 group-hover:text-electric-blue transition-colors">
+                  7002642149, 8011551863
                 </a>
               </li>
               
