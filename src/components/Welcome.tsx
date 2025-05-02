@@ -1,5 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Loader } from 'lucide-react';
 
 const Welcome = () => {
   const [visible, setVisible] = useState(true);
@@ -35,11 +37,21 @@ const Welcome = () => {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="relative"
             >
-              <img 
-                src="/lovable-uploads/1e56e3ab-ca17-4e3a-96cb-d62c665012a8.png" 
-                alt="GraphiXlab Logo" 
-                className="w-20 h-20 mx-auto mb-4"
-              />
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/1e56e3ab-ca17-4e3a-96cb-d62c665012a8.png" 
+                  alt="GraphiXlab Logo" 
+                  className="w-20 h-20 mx-auto mb-4"
+                />
+                <motion.div 
+                  className="absolute inset-0 flex items-center justify-center"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                >
+                  <Loader className="text-electric-blue w-24 h-24 animate-spin-slow opacity-70" strokeWidth={1} />
+                </motion.div>
+              </div>
             </motion.div>
             
             <motion.h1
