@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Loader } from 'lucide-react';
+import { CircleDashed } from 'lucide-react';
 
 const Welcome = () => {
   const [visible, setVisible] = useState(true);
@@ -49,7 +49,7 @@ const Welcome = () => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
                 >
-                  <Loader className="text-electric-blue w-24 h-24 animate-spin-slow opacity-70" strokeWidth={1} />
+                  <CircleDashed className="text-electric-blue w-28 h-28 animate-spin-slow opacity-80 absolute" strokeWidth={1} strokeDasharray="4 4" />
                 </motion.div>
               </div>
             </motion.div>
