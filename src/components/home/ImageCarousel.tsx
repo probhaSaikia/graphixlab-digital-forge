@@ -12,6 +12,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 // Fix: Import Autoplay correctly as default import
 import AutoplayModule from 'embla-carousel-autoplay';
 import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 // Use the imported autoplay module correctly
 const Autoplay = AutoplayModule;
@@ -23,6 +24,7 @@ interface CarouselSlide {
 }
 
 const ImageCarousel = () => {
+  const isMobile = useIsMobile();
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: 'center' }, 
     [Autoplay({ delay: 5000, stopOnInteraction: false })]
@@ -98,7 +100,7 @@ const ImageCarousel = () => {
           >
             <CarouselContent>
               {slides.map((slide, index) => (
-                <CarouselItem key={index} className="md:basis-3/4 lg:basis-3/4"> {/* Increased from 2/3 and 3/5 to 3/4 */}
+                <CarouselItem key={index} className={isMobile ? "basis-full" : "md:basis-3/4 lg:basis-3/4"}> {/* Changed from md:basis-3/4 to basis-full on mobile */}
                   <div className={cn(
                     "relative overflow-hidden rounded-xl transition-all duration-500 transform",
                     activeSlide === index ? "scale-100 opacity-100" : "scale-95 opacity-80" // Changed scale and opacity for better visibility
