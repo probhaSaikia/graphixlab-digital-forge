@@ -7,6 +7,7 @@ import WhyChooseUsSection from '@/components/home/WhyChooseUsSection';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
 import ImageCarousel from '@/components/home/ImageCarousel';
 import ContactSection from '@/components/home/ContactSection';
+import { Button } from '@/components/ui/button';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -15,9 +16,11 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Home, Layout as LayoutIcon } from "lucide-react";
+import { Home, Layout as LayoutIcon, Users } from "lucide-react";
 
 const Index = () => {
+  const joinTeamWhatsAppLink = `https://wa.me/7002642149?text=${encodeURIComponent("Hello! I would like to join your team. Please let me know about available opportunities.")}`;
+
   return (
     <Layout>
       <div className="relative">
@@ -45,6 +48,28 @@ const Index = () => {
           title1="Elevate Your Digital"
           title2="Presence With Style"
         />
+        
+        {/* Join Our Team Button Section */}
+        <div className="relative bg-black py-8">
+          <div className="container mx-auto px-4 text-center">
+            <div className="inline-flex items-center justify-center p-1 rounded-full bg-gradient-to-r from-electric-blue/20 to-neon-pink/20 border border-electric-blue/30">
+              <a
+                href={joinTeamWhatsAppLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <Button className="bg-gradient-to-r from-electric-blue to-neon-pink hover:from-electric-blue/80 hover:to-neon-pink/80 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:shadow-glow flex items-center gap-2">
+                  <Users size={20} />
+                  Join Our Team
+                </Button>
+              </a>
+            </div>
+            <p className="text-gray-400 text-sm mt-2">
+              Passionate about digital innovation? Come work with us!
+            </p>
+          </div>
+        </div>
         
         <ServicesSection />
         
