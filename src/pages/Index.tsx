@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { HeroGeometric } from '@/components/ui/shape-landing-hero';
@@ -75,16 +74,16 @@ const Index = () => {
                 Build the Future with <span className="text-electric-blue">GraphiXlab</span>
               </h3>
               <p className="text-gray-300 text-lg mb-6">
-                We're always looking for talented individuals who share our passion for creating exceptional digital experiences. Whether you're a designer, developer, or creative visionary, we'd love to hear from you.
+                We're always looking for talented individuals who share our passion for creating exceptional digital experiences. Whether you're a designer, telecaller, or social media influencer, we'd love to hear from you.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-400">
                 <div className="text-center">
-                  <h4 className="text-white font-semibold mb-2">Remote-Friendly</h4>
-                  <p className="text-sm">Work from anywhere with flexible schedules</p>
+                  <h4 className="text-white font-semibold mb-2">Telecaller</h4>
+                  <p className="text-sm">Remote position • Earn up to ₹30,000/month</p>
                 </div>
                 <div className="text-center">
-                  <h4 className="text-white font-semibold mb-2">Growth Opportunities</h4>
-                  <p className="text-sm">Continuous learning and career advancement</p>
+                  <h4 className="text-white font-semibold mb-2">Social Media Influencer</h4>
+                  <p className="text-sm">Remote position • Earn up to ₹30,000/month</p>
                 </div>
                 <div className="text-center">
                   <h4 className="text-white font-semibold mb-2">Creative Freedom</h4>
