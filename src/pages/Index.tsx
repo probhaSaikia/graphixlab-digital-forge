@@ -7,21 +7,11 @@ import PortfolioPreview from '@/components/home/PortfolioPreview';
 import ImageCarousel from '@/components/home/ImageCarousel';
 import ContactSection from '@/components/home/ContactSection';
 import { Button } from '@/components/ui/button';
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Home, Layout as LayoutIcon, Users } from "lucide-react";
-
 const Index = () => {
   const joinTeamWhatsAppLink = `https://wa.me/7002642149?text=${encodeURIComponent("Hello! I would like to join your team. Please let me know about available opportunities.")}`;
-
-  return (
-    <Layout>
+  return <Layout>
       <div className="relative">
         {/* Breadcrumb appears above hero */}
         <div className="container mx-auto py-4 px-4 text-white/80 bg-black">
@@ -34,30 +24,19 @@ const Index = () => {
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="text-electric-blue">Dashboard</BreadcrumbPage>
-              </BreadcrumbItem>
+              
             </BreadcrumbList>
           </Breadcrumb>
         </div>
         
         {/* Explicitly setting the badge prop */}
-        <HeroGeometric 
-          badge="GraphiXlab Digital Forge"
-          title1="Elevate Your Digital"
-          title2="Presence With Style"
-        />
+        <HeroGeometric badge="GraphiXlab Digital Forge" title1="Elevate Your Digital" title2="Presence With Style" />
         
         {/* Join Our Team Button Section */}
         <div className="relative bg-black py-12">
           <div className="container mx-auto px-4 text-center">
             <div className="inline-flex items-center justify-center p-1 rounded-full bg-gradient-to-r from-electric-blue/20 to-neon-pink/20 border border-electric-blue/30">
-              <a
-                href={joinTeamWhatsAppLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
+              <a href={joinTeamWhatsAppLink} target="_blank" rel="noopener noreferrer" className="inline-block">
                 <Button className="bg-gradient-to-r from-electric-blue to-neon-pink hover:from-electric-blue/80 hover:to-neon-pink/80 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:shadow-glow flex items-center gap-2">
                   <Users size={20} />
                   Join Our Team
@@ -100,7 +79,9 @@ const Index = () => {
         <div className="relative bg-black">
           <div className="absolute left-1/2 -translate-x-1/2 -top-5 w-20 h-10">
             <div className="absolute w-full h-full bg-electric-blue opacity-20 blur-xl rounded-full animate-pulse-slow"></div>
-            <div className="absolute w-1/2 h-1/2 left-1/4 top-1/4 bg-neon-pink opacity-30 blur-lg rounded-full animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute w-1/2 h-1/2 left-1/4 top-1/4 bg-neon-pink opacity-30 blur-lg rounded-full animate-pulse-slow" style={{
+            animationDelay: '1s'
+          }}></div>
           </div>
         </div>
         
@@ -114,11 +95,7 @@ const Index = () => {
               <div className="mx-4">
                 <div className="relative w-8 h-8">
                   <div className="absolute inset-0 bg-electric-blue/20 rounded-full blur-md animate-pulse-slow"></div>
-                  <img 
-                    src="/lovable-uploads/1e56e3ab-ca17-4e3a-96cb-d62c665012a8.png" 
-                    alt="GraphiXlab Icon" 
-                    className="w-full h-full object-contain relative z-10"
-                  />
+                  <img src="/lovable-uploads/1e56e3ab-ca17-4e3a-96cb-d62c665012a8.png" alt="GraphiXlab Icon" className="w-full h-full object-contain relative z-10" />
                 </div>
               </div>
               <div className="h-px w-1/3 bg-gradient-to-l from-transparent to-neon-pink/50"></div>
@@ -133,8 +110,6 @@ const Index = () => {
         
         <ContactSection />
       </div>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Index;
