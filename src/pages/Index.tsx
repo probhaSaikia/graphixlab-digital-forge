@@ -33,45 +33,7 @@ const Index = () => {
         <HeroGeometric badge="GraphiXlab Digital Forge" title1="Elevate Your Digital" title2="Presence With Style" />
         
         {/* Join Our Team Button Section */}
-        <div className="relative bg-black py-12">
-          <div className="container mx-auto px-4 text-center">
-            <div className="inline-flex items-center justify-center p-1 rounded-full bg-gradient-to-r from-electric-blue/20 to-neon-pink/20 border border-electric-blue/30">
-              <a href={joinTeamWhatsAppLink} target="_blank" rel="noopener noreferrer" className="inline-block">
-                <Button className="bg-gradient-to-r from-electric-blue to-neon-pink hover:from-electric-blue/80 hover:to-neon-pink/80 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:shadow-glow flex items-center gap-2">
-                  <Users size={20} />
-                  Join Our Team
-                </Button>
-              </a>
-            </div>
-            <p className="text-gray-400 text-sm mt-2">
-              Passionate about digital innovation? Come work with us!
-            </p>
-            
-            {/* Additional descriptive content */}
-            <div className="mt-8 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Build the Future with <span className="text-electric-blue">GraphiXlab</span>
-              </h3>
-              <p className="text-gray-300 text-lg mb-6">
-                We're always looking for talented individuals who share our passion for creating exceptional digital experiences. Whether you're a designer, telecaller, or social media influencer, we'd love to hear from you.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-400">
-                <div className="text-center">
-                  <h4 className="text-white font-semibold mb-2">Telecaller</h4>
-                  <p className="text-sm">Remote position • Earn up to ₹30,000/month</p>
-                </div>
-                <div className="text-center">
-                  <h4 className="text-white font-semibold mb-2">Social Media Influencer</h4>
-                  <p className="text-sm">Remote position • Earn up to ₹30,000/month</p>
-                </div>
-                <div className="text-center">
-                  <h4 className="text-white font-semibold mb-2">Creative Freedom</h4>
-                  <p className="text-sm">Express your ideas and shape innovative projects</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
         
         <ServicesSection />
         
