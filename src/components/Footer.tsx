@@ -6,7 +6,8 @@ import { useIsMobile } from '@/hooks/use-mobile';
 const Footer = () => {
   const isMobile = useIsMobile();
   
-  return <footer className="bg-deep-black border-t border-electric-blue/20 pt-12 pb-6 md:pt-16 md:pb-8">
+  return (
+    <footer className="bg-deep-black border-t border-electric-blue/20 pt-12 pb-6 md:pt-16 md:pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
           {/* Logo and Description */}
@@ -96,6 +97,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="transform hover:translate-x-1 md:hover:translate-x-2 transition-transform duration-300">
+                <Link to="/careers" className="text-gray-400 hover:text-electric-blue transition-colors">
+                  Careers
+                </Link>
+              </li>
+              <li className="transform hover:translate-x-1 md:hover:translate-x-2 transition-transform duration-300">
                 <Link to="/contact" className="text-gray-400 hover:text-electric-blue transition-colors">
                   Contact
                 </Link>
@@ -164,7 +170,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
 
 export default Footer;

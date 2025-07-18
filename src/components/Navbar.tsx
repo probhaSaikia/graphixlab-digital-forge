@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Phone, Home, Briefcase, FolderHeart, Users, MessageSquare, BookOpen } from 'lucide-react';
+import { Menu, X, Phone, Home, Briefcase, FolderHeart, Users, MessageSquare, UserPlus } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
 import { useToast } from '@/hooks/use-toast';
 
@@ -92,6 +92,14 @@ const Navbar = () => {
             <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300 font-medium">About</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-neon-pink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
+          <Link to="/careers" className="text-white relative overflow-hidden group flex items-center py-2">
+            <UserPlus 
+              size={18} 
+              className="mr-2 text-electric-blue transition-all duration-300 group-hover:scale-110" 
+            />
+            <span className="relative z-10 group-hover:text-electric-blue transition-colors duration-300 font-medium">Careers</span>
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-electric-blue to-neon-pink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+          </Link>
           <Link to="/contact" className="text-white relative overflow-hidden group flex items-center py-2">
             <MessageSquare 
               size={18} 
@@ -162,6 +170,14 @@ const Navbar = () => {
             >
               <Users size={18} className="mr-3 text-electric-blue" />
               About
+            </Link>
+            <Link 
+              to="/careers" 
+              className="text-white hover:text-electric-blue transition-colors py-3 text-center border border-transparent hover:border-electric-blue/30 rounded-lg flex items-center justify-center"
+              onClick={() => setIsOpen(false)}
+            >
+              <UserPlus size={18} className="mr-3 text-electric-blue" />
+              Careers
             </Link>
             <Link 
               to="/contact" 

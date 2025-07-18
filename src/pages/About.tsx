@@ -2,7 +2,8 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Award, Users, Clock, CheckCircle, Star, Globe, MessageSquare } from 'lucide-react';
+import { Award, Users, Clock, CheckCircle, Star, Globe, MessageSquare, UserPlus } from 'lucide-react';
+
 const About = () => {
   // Skills matrix data
   const skills = [{
@@ -42,6 +43,7 @@ const About = () => {
     position: "Founder, InnovateX",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
   }];
+
   return <Layout>
       {/* Hero Section */}
       <section className="bg-black py-20 md:py-[24px]">
@@ -202,15 +204,36 @@ const About = () => {
                 <div className="text-4xl font-bold text-white mb-2">50+</div>
                 <p className="text-gray-400">Projects Completed</p>
               </div>
-              
-              
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      
+      {/* Join Our Team CTA Section */}
+      <section className="py-16 bg-black">
+        <div className="container mx-auto px-4">
+          <div className="bg-gradient-to-r from-electric-blue/10 to-neon-pink/10 border border-electric-blue/20 rounded-2xl p-8 md:p-12 text-center">
+            <div className="w-16 h-16 rounded-full bg-electric-blue/10 flex items-center justify-center mx-auto mb-6">
+              <UserPlus className="text-electric-blue" size={28} />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Interested in <span className="text-electric-blue">Working</span> With Us?
+            </h2>
+            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+              We're always looking for talented individuals who share our passion for innovation and excellence. 
+              Join our growing team and help us create amazing digital experiences.
+            </p>
+            <Button 
+              asChild 
+              className="bg-gradient-to-r from-electric-blue to-neon-pink hover:from-electric-blue/80 hover:to-neon-pink/80 text-white font-bold px-8 py-4 text-lg rounded-lg hover:shadow-lg hover:shadow-electric-blue/25 transition-all duration-300"
+            >
+              <Link to="/careers">
+                View Openings
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-black">
@@ -226,4 +249,5 @@ const About = () => {
       </section>
     </Layout>;
 };
+
 export default About;
