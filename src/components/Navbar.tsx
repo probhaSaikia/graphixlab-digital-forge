@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -136,7 +137,7 @@ const Navbar = () => {
 
       {/* Enhanced Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-deep-black/98 backdrop-blur-lg border-b border-electric-blue/20 py-6 px-4 animate-fade-in shadow-xl">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-deep-black border-b border-electric-blue/20 py-6 px-4 animate-fade-in shadow-xl">
           <div className="flex flex-col space-y-4">
             
             <Link 
