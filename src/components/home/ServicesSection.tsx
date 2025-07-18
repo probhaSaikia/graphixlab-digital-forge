@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { 
   Globe, 
@@ -10,32 +11,42 @@ import {
   Mail, 
   Database,
   Users,
-  ChevronRight 
+  ArrowRight,
+  TrendingUp,
+  Smartphone
 } from 'lucide-react';
 
 interface ServiceCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  benefits: string[];
   delay: number;
 }
 
-const ServiceCard = ({ icon, title, description, delay }: ServiceCardProps) => (
-  <Card className="bg-black border border-electric-blue/20 card-hover animate-fade-in" style={{ animationDelay: `${delay}s` }}>
-    <CardHeader>
-      <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-electric-blue/10 mb-4">
+const ServiceCard = ({ icon, title, description, benefits, delay }: ServiceCardProps) => (
+  <Card className="bg-black/60 border border-electric-blue/20 hover:border-electric-blue/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-electric-blue/20 animate-fade-in group" style={{ animationDelay: `${delay}s` }}>
+    <CardHeader className="pb-4">
+      <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-electric-blue/10 mb-4 group-hover:bg-electric-blue/20 transition-colors">
         {icon}
       </div>
-      <CardTitle className="text-white">{title}</CardTitle>
+      <CardTitle className="text-white text-xl mb-2">{title}</CardTitle>
+      <CardDescription className="text-gray-300 leading-relaxed">{description}</CardDescription>
     </CardHeader>
-    <CardContent>
-      <CardDescription className="text-gray-400">{description}</CardDescription>
-      <Link 
-        to="/services" 
-        className="flex items-center text-electric-blue mt-4 hover:underline"
-      >
-        Learn More <ChevronRight size={16} className="ml-1" />
-      </Link>
+    <CardContent className="pt-0">
+      <ul className="space-y-2 mb-6">
+        {benefits.map((benefit, index) => (
+          <li key={index} className="flex items-start gap-2 text-sm text-gray-400">
+            <div className="w-1.5 h-1.5 rounded-full bg-electric-blue mt-2 flex-shrink-0"></div>
+            {benefit}
+          </li>
+        ))}
+      </ul>
+      <Button asChild className="w-full bg-electric-blue/10 hover:bg-electric-blue text-electric-blue hover:text-white border border-electric-blue/30 transition-all duration-300">
+        <Link to="/services" className="flex items-center justify-center gap-2">
+          Learn More <ArrowRight size={16} />
+        </Link>
+      </Button>
     </CardContent>
   </Card>
 );
@@ -43,69 +54,129 @@ const ServiceCard = ({ icon, title, description, delay }: ServiceCardProps) => (
 const ServicesSection = () => {
   const services = [
     {
-      icon: <Globe className="text-electric-blue" size={24} />,
-      title: 'Web Development',
-      description: 'Custom websites and web applications built with the latest technologies.',
+      icon: <Globe className="text-electric-blue" size={28} />,
+      title: 'Websites That Convert',
+      description: 'Transform visitors into customers with high-performance websites designed for results.',
+      benefits: [
+        'Mobile-first responsive design',
+        'SEO-optimized architecture',
+        'Fast loading speeds',
+        'Conversion-focused layouts'
+      ],
       delay: 0.1
     },
     {
-      icon: <Search className="text-electric-blue" size={24} />,
-      title: 'SEO Optimization',
-      description: 'Boost your visibility and drive more traffic to your website.',
+      icon: <TrendingUp className="text-electric-blue" size={28} />,
+      title: 'Growth-Driven SEO',
+      description: 'Dominate search results and attract qualified leads with strategic SEO optimization.',
+      benefits: [
+        'Keyword research & strategy',
+        'Technical SEO optimization',
+        'Content optimization',
+        'Local SEO for businesses'
+      ],
       delay: 0.2
     },
     {
-      icon: <PenTool className="text-electric-blue" size={24} />,
-      title: 'Graphic Design',
-      description: 'Eye-catching visuals that communicate your brand message effectively.',
+      icon: <PenTool className="text-electric-blue" size={28} />,
+      title: 'Brand Identity Design',
+      description: 'Create memorable brand experiences that resonate with your target audience.',
+      benefits: [
+        'Logo & visual identity design',
+        'Brand guideline development',
+        'Marketing collateral design',
+        'Digital asset creation'
+      ],
       delay: 0.3
     },
     {
-      icon: <LineChart className="text-electric-blue" size={24} />,
-      title: 'Digital Marketing',
-      description: 'Strategic campaigns to grow your audience and increase conversions.',
+      icon: <LineChart className="text-electric-blue" size={28} />,
+      title: 'Results-Driven Marketing',
+      description: 'Amplify your reach and maximize ROI with data-driven digital marketing strategies.',
+      benefits: [
+        'Social media advertising',
+        'Google Ads management',
+        'Analytics & reporting',
+        'Marketing automation'
+      ],
       delay: 0.4
     },
     {
-      icon: <Users className="text-electric-blue" size={24} />,
-      title: 'Social Media Management',
-      description: 'Professional management of your social media presence across platforms.',
+      icon: <Users className="text-electric-blue" size={28} />,
+      title: 'Social Media Mastery',
+      description: 'Build engaged communities and drive brand awareness across all social platforms.',
+      benefits: [
+        'Content strategy & creation',
+        'Community management',
+        'Influencer partnerships',
+        'Social commerce setup'
+      ],
       delay: 0.5
     },
     {
-      icon: <Mail className="text-electric-blue" size={24} />,
-      title: 'Email Campaigns',
-      description: 'Engaging email marketing that nurtures leads and drives sales.',
+      icon: <Mail className="text-electric-blue" size={28} />,
+      title: 'Email Marketing Success',
+      description: 'Nurture leads and boost sales with personalized email campaigns that perform.',
+      benefits: [
+        'Automated email sequences',
+        'List building strategies',
+        'A/B testing & optimization',
+        'Performance analytics'
+      ],
       delay: 0.6
-    },
-    {
-      icon: <Database className="text-electric-blue" size={24} />,
-      title: 'Web Hosting',
-      description: 'Reliable hosting solutions with top-tier performance and security.',
-      delay: 0.7
-    },
+    }
   ];
   
   return (
-    <section className="py-20 bg-black">
+    <section className="py-24 bg-black">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Services</h2>
+        {/* Enhanced Section Header */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 bg-electric-blue/10 px-4 py-2 rounded-full border border-electric-blue/20 mb-6">
+            <Smartphone className="text-electric-blue" size={16} />
+            <span className="text-electric-blue text-sm font-medium">Full-Service Solutions</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            Services That <span className="text-electric-blue">Drive Growth</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-4">
+            From stunning websites to powerful marketing campaigns, we deliver comprehensive digital solutions.
+          </p>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Comprehensive digital solutions to help your business thrive in the online world.
+            Each service is designed to work together, creating a cohesive digital ecosystem for your business.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <ServiceCard 
               key={index}
               icon={service.icon}
               title={service.title}
               description={service.description}
+              benefits={service.benefits}
               delay={service.delay}
             />
           ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center bg-electric-blue/5 border border-electric-blue/20 rounded-2xl p-12">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h3>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Let's discuss how our services can help you achieve your digital goals and drive real results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild className="bg-electric-blue hover:bg-electric-blue/90 text-white px-8 py-3 text-lg">
+              <Link to="/contact">Get Free Consultation</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-white px-8 py-3 text-lg">
+              <Link to="/services">View All Services</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
