@@ -14,7 +14,7 @@ const Index = () => {
   return <Layout>
       <div className="relative">
         {/* Breadcrumb appears above hero */}
-        <div className="container mx-auto py-4 px-4 text-white/80 bg-black">
+        <div className="container text-white/80 bg-black mx-[33px] py-0 my-0 px-[26px]">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>

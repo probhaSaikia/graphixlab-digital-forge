@@ -100,7 +100,7 @@ const Layout = ({
       </div>
       
       <Navbar />
-      <main className="flex-grow pt-16 bg-deep-black px-0 py-0">
+      <main className="flex-grow pt-16 bg-deep-black px-0 mx-0 py-0">
         <motion.div key={location.pathname} initial={{
         opacity: 0
       }} animate={{
