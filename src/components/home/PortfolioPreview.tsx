@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -18,7 +17,7 @@ const PortfolioPreview = () => {
       { metric: '3x', description: 'Faster page load times' }
     ],
     link: 'https://maharshiexcellenceacademy.com',
-    image: '/placeholder.svg?height=400&width=600'
+    image: '/lovable-uploads/8ea93cc9-96b2-4be5-b2e2-941eceffbe3d.png' // Using the Travel Agency image as a strong visual placeholder
   };
   
   return (
@@ -31,15 +30,15 @@ const PortfolioPreview = () => {
             <span className="text-electric-blue text-sm font-medium">Success Stories</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Our <span className="text-electric-blue">Work</span> Speaks
+            Our <span className="text-electric-blue text-glow">Work</span> Speaks
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Real projects, real results. See how we've helped businesses transform their digital presence.
           </p>
         </div>
         
-        {/* Featured Case Study */}
-        <div className="bg-gradient-to-br from-electric-blue/5 to-neon-pink/5 border border-electric-blue/20 rounded-2xl overflow-hidden mb-16">
+        {/* Featured Case Study - Enhanced border and shadow */}
+        <div className="bg-gradient-to-br from-electric-blue/5 to-neon-pink/5 border border-electric-blue/20 rounded-2xl overflow-hidden mb-16 shadow-lg shadow-electric-blue/10">
           <div className="grid lg:grid-cols-2 gap-0">
             {/* Content Side */}
             <div className="p-8 lg:p-12">
@@ -62,19 +61,19 @@ const PortfolioPreview = () => {
               <div className="space-y-6 mb-8">
                 <div>
                   <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
-                    <div className="w-2 h-2 bg-electric-blue rounded-full"></div>
+                    <div className="w-2 h-2 bg-electric-blue rounded-full animate-pulse-slow"></div>
                     Challenge
                   </h4>
-                  <p className="text-gray-400 leading-relaxed pl-4">
+                  <p className="text-gray-400 leading-relaxed pl-4 border-l-2 border-electric-blue/30">
                     {featuredProject.challenge}
                   </p>
                 </div>
                 <div>
                   <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
-                    <div className="w-2 h-2 bg-neon-pink rounded-full"></div>
+                    <div className="w-2 h-2 bg-neon-pink rounded-full animate-pulse-slow" style={{ animationDelay: '0.5s' }}></div>
                     Solution
                   </h4>
-                  <p className="text-gray-400 leading-relaxed pl-4">
+                  <p className="text-gray-400 leading-relaxed pl-4 border-l-2 border-neon-pink/30">
                     {featuredProject.solution}
                   </p>
                 </div>
@@ -83,7 +82,7 @@ const PortfolioPreview = () => {
               {/* Results Metrics */}
               <div className="grid grid-cols-3 gap-4 mb-8">
                 {featuredProject.results.map((result, index) => (
-                  <div key={index} className="text-center p-4 bg-black/40 rounded-lg border border-electric-blue/10">
+                  <div key={index} className="text-center p-4 bg-black/40 rounded-lg border border-electric-blue/10 hover:shadow-glow transition-all duration-300">
                     <div className="text-2xl md:text-3xl font-bold text-electric-blue mb-1">
                       {result.metric}
                     </div>
@@ -94,32 +93,28 @@ const PortfolioPreview = () => {
                 ))}
               </div>
 
-              <Button asChild className="bg-electric-blue hover:bg-electric-blue/90 text-white flex items-center gap-2 w-full sm:w-auto">
+              <Button asChild className="btn-primary flex items-center gap-2 w-full sm:w-auto">
                 <a href={featuredProject.link} target="_blank" rel="noopener noreferrer">
                   Visit Live Site <ExternalLink size={16} />
                 </a>
               </Button>
             </div>
 
-            {/* Visual Side */}
-            <div className="bg-electric-blue/10 p-8 lg:p-12 flex items-center justify-center">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/20 to-neon-pink/20 rounded-lg blur-xl"></div>
-                <div className="relative bg-black/60 p-8 rounded-lg border border-electric-blue/30">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-2">
-                      <Users className="text-electric-blue" size={20} />
-                      <span className="text-white font-medium">Educational Platform</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <TrendingUp className="text-neon-pink" size={20} />
-                      <span className="text-white font-medium">Growth-Focused Design</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Globe className="text-electric-blue" size={20} />
-                      <span className="text-white font-medium">Mobile-First Approach</span>
-                    </div>
-                  </div>
+            {/* Visual Side - Using Image with Neon Border/Glow */}
+            <div className="bg-black/60 p-8 lg:p-12 flex items-center justify-center min-h-[400px]">
+              <div className="relative w-full max-w-lg mx-auto group">
+                {/* Neon Glow Container */}
+                <div className="absolute inset-0 bg-electric-blue/50 blur-3xl rounded-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse-slow"></div>
+                
+                <div className="relative rounded-xl overflow-hidden border-4 border-electric-blue/30 shadow-2xl shadow-neon-pink/20">
+                  <img
+                    src={featuredProject.image}
+                    alt={featuredProject.title + " preview"}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/50 backdrop-blur-sm text-center">
+                    <p className="text-xs text-gray-400">Visual mockup of a recent project (Travel Agency) illustrating design style.</p>
                 </div>
               </div>
             </div>
@@ -135,10 +130,10 @@ const PortfolioPreview = () => {
             Let's discuss your project and create something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild className="bg-electric-blue hover:bg-electric-blue/90 text-white px-8 py-3 text-lg">
+            <Button asChild className="btn-primary">
               <Link to="/contact">Start Your Project</Link>
             </Button>
-            <Button asChild variant="outline" className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-white px-8 py-3 text-lg">
+            <Button asChild variant="outline" className="btn-secondary">
               <Link to="/portfolio">View All Work</Link>
             </Button>
           </div>
