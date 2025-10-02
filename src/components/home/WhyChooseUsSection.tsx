@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Users, 
@@ -8,6 +7,7 @@ import {
   Trophy,
   BadgeCheck
 } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card'; // Import Card components
 
 interface FeatureProps {
   icon: React.ReactNode;
@@ -17,17 +17,22 @@ interface FeatureProps {
 }
 
 const Feature = ({ icon, title, description, delay }: FeatureProps) => (
-  <div className="flex items-start animate-slide-in" style={{ animationDelay: `${delay}s` }}>
-    <div className="flex-shrink-0 mr-4">
-      <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-electric-blue/10">
-        {icon}
+  <Card 
+    className="bg-black/60 border border-electric-blue/20 card-hover animate-slide-in" 
+    style={{ animationDelay: `${delay}s` }}
+  >
+    <CardContent className="p-6 flex items-start">
+      <div className="flex-shrink-0 mr-4">
+        <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-electric-blue/10 group-hover:bg-electric-blue/20 transition-colors">
+          {icon}
+        </div>
       </div>
-    </div>
-    <div>
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-gray-400">{description}</p>
-    </div>
-  </div>
+      <div>
+        <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+        <p className="text-gray-400">{description}</p>
+      </div>
+    </CardContent>
+  </Card>
 );
 
 const WhyChooseUsSection = () => {
