@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -87,6 +86,9 @@ const AdvancedContactForm = () => {
     })
   };
 
+  // Enhanced input and textarea classes for neon theme
+  const neonInputClass = "bg-black/60 border-electric-blue/30 text-white transition-all duration-300 focus-visible:ring-offset-0 focus-visible:ring-electric-blue focus-visible:border-electric-blue focus-visible:shadow-glow focus-visible:shadow-electric-blue/50";
+  
   return (
     <motion.div 
       initial={{ opacity: 0, scale: 0.98 }}
@@ -117,7 +119,7 @@ const AdvancedContactForm = () => {
                     <FormControl>
                       <Input 
                         placeholder="Your Name" 
-                        className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white"
+                        className={neonInputClass} // Applied new class
                         {...field}
                       />
                     </FormControl>
@@ -142,7 +144,7 @@ const AdvancedContactForm = () => {
                     <FormControl>
                       <Input 
                         placeholder="your.email@example.com" 
-                        className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white"
+                        className={neonInputClass} // Applied new class
                         {...field}
                       />
                     </FormControl>
@@ -169,7 +171,7 @@ const AdvancedContactForm = () => {
                     <FormControl>
                       <Input 
                         placeholder="Your Phone Number" 
-                        className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white"
+                        className={neonInputClass} // Applied new class
                         {...field}
                       />
                     </FormControl>
@@ -194,7 +196,7 @@ const AdvancedContactForm = () => {
                     <FormControl>
                       <Input 
                         placeholder="Project Inquiry" 
-                        className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white"
+                        className={neonInputClass} // Applied new class
                         {...field}
                       />
                     </FormControl>
@@ -220,7 +222,7 @@ const AdvancedContactForm = () => {
                   <FormControl>
                     <Textarea 
                       placeholder="Tell us about your project..." 
-                      className="bg-black/60 border-electric-blue/30 focus:border-electric-blue text-white min-h-[100px] md:min-h-[120px]"
+                      className={cn(neonInputClass, "min-h-[100px] md:min-h-[120px]")} // Applied new class
                       {...field}
                     />
                   </FormControl>
@@ -239,7 +241,7 @@ const AdvancedContactForm = () => {
           >
             <Button 
               type="submit" 
-              className="w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-semibold py-2 md:py-3 px-4 md:px-6 rounded-md hover:shadow-glow transition-all duration-300"
+              className="w-full bg-gradient-to-r from-electric-blue to-[#FF52FF] text-white font-semibold py-2 md:py-3 px-4 md:px-6 rounded-md hover:shadow-glow transition-all duration-300 hover:opacity-90" // Added hover:opacity-90 for feedback
               disabled={isSubmitting || isSubmitted}
             >
               {isSubmitting ? (
