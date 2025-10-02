@@ -5,7 +5,8 @@ import { Circle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { useTheme } from '@/context/ThemeContext';
-
+import { Button } from "@/components/ui/button"; // Import Button
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 function ElegantShape({
     className,
@@ -200,12 +201,12 @@ function HeroGeometric({
                         animate="visible"
                         className="flex flex-wrap justify-center gap-4"
                     >
-                        <button className="px-6 py-3 rounded-md bg-electric-blue text-white font-medium hover:bg-electric-blue/90 transition-colors">
-                            Get Started
-                        </button>
-                        <button className="px-6 py-3 rounded-md bg-white/5 border border-white/10 text-white/80 font-medium hover:bg-white/10 transition-colors">
-                            View Portfolio
-                        </button>
+                        <Button asChild className="btn-primary">
+                            <Link to="/contact">Get Started</Link>
+                        </Button>
+                        <Button asChild className="btn-secondary">
+                            <Link to="/portfolio">View Portfolio</Link>
+                        </Button>
                     </motion.div>
                 </div>
             </div>
